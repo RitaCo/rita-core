@@ -5,7 +5,7 @@ use Cake\Routing\Router;
 //});
 Router::prefix('admin',function($routes){
 
-	$routes->connect('/*', ['controller' => 'Dashboard', 'action' => 'index','plugin'=>'Admin']);
+	$routes->connect('/*', ['controller' => 'Dashboard', 'action' => 'index','plugin'=>'Rita']);
 
 
 	

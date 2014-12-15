@@ -1,8 +1,8 @@
 <?php
 
-namespace Admin\Controller\Admin;
+namespace Rita\Controller\Admin;
 
-use Admin\Controller\AppController;
+use Rita\Controller\AppController;
 
 class DashboardController  extends AppController {
 	
