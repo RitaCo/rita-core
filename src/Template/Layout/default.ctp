@@ -25,7 +25,6 @@ $cakeDescription = 'ریتا : ';
 		<?= $this->fetch('title') ?>
 	</title>
 	<?= $this->Html->meta('icon') ?>
-	<?= $this->Html->css('admin') ?>
 	<?= $this->Html->css('cake') ?>
 	<?= $this->Rita->css() ?>
 	<?= $this->Html->script([
