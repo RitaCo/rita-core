@@ -1,6 +1,6 @@
 <?php
 
-namespace Admin\Controller;
+namespace Rita\Controller;
 
 use App\Controller\AppController as BaseController;
 

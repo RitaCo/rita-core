@@ -1,5 +1,5 @@
 <?php
-namespace Admin\View\Cell;
+namespace Rita\View\Cell;
 
 use Cake\View\Cell;
 use Cake\Event\Event;

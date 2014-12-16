@@ -27,7 +27,7 @@ $cakeDescription = 'ریتا : ';
 	<?= $this->Html->meta('icon') ?>
 	<?= $this->Html->css('admin') ?>
 	<?= $this->Html->css('cake') ?>
-
+	<?= $this->Rita->css() ?>
 	<?= $this->Html->script([
 		'jquery-2.1.1',
 		'jquery.sticky',
@@ -55,7 +55,7 @@ $cakeDescription = 'ریتا : ';
 		
 		
 		<section class="admin-body-wrapper">
-			<?= $this->cell('Admin.Navigator'); ?>	
+			<?= $this->cell('Rita.Navigator'); ?>	
 			
 			<div class="admin-content-wrapper">
 			
