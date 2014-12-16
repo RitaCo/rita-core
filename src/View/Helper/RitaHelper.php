@@ -2,7 +2,9 @@
 namespace Rita\View\Helper;
 
 use Cake\View\Helper;
-use \Cake\Utility\Hash;
+use Cake\Utility\Hash;
+use Cake\Core\Plugin;
+use Cake\Cache\Cache;
 class RitaHelper extends Helper {
 
 	
@@ -11,6 +13,25 @@ class RitaHelper extends Helper {
 	protected $_assets = [];
 
 
+	
+	protected function fetchSetting() {
+		
+		if (($settings = Cache::read('settings','rita')) === false) {
+			$settings = [];
+			foreach(Plugin::loaded() as $plugin){
+				$file = Plugin::path($plugin).'config'.DS.'settings.php';
+				if (!file_exists(Plugin::path($plugin).'config'.DS.'settings.php')) {
+					continue;
+				}
+				$temp = require($file);
+				if(is_array($temp)){
+					$settings[] = $temp;
+				}
+			}
+			Cache::write('settings', $settings,'rita');
+		}
+		return $settings;
+	}
 
 
 	/**
@@ -44,31 +65,10 @@ class RitaHelper extends Helper {
 		if(!$scope) {
 			$scope = ($this->request->param('prefix')) ? $this->request->param('prefix') : 'front';
 		}
-		$css = [];
-	
-
-		foreach(['base', $scope] as $val ) {
-			
-			if(!isset($assets[$val])) {
-				continue;
-			}
-			
-//		if(if($assets[$val])){
-//			$scope = $assets[$scope]; 	
-//		}			
-//			pr($val);
-//			if($val === null){
-//				continue;
-//			}
-//			if(is_string($val)){
-//				$val =[$val];
-//			}
-//			$css = array_m($css, $val);
-		}
-	//	unset($root,$scope,$prefix,$assets);
-		pr($assets);
-		exit();
-		 return; 		
+		$all = $this->fetchSetting();
+		$css = Hash::extract($all,'{n}.css.base.{n}');
+		$css = array_merge($css, Hash::extract($all,"{n}.css.{$scope}.{n}"));
+		 return $this->Html->css($css); 		
 	}
 
 
