@@ -5,6 +5,7 @@ use Cake\View\Helper;
 use Cake\Utility\Hash;
 use Cake\Core\Plugin;
 use Cake\Cache\Cache;
+use Cake\Log\Log;
 class RitaHelper extends Helper {
 
 	
@@ -68,6 +69,7 @@ class RitaHelper extends Helper {
 		$all = $this->fetchSetting();
 		$css = Hash::extract($all,'{n}.css.base.{n}');
 		$css = array_merge($css, Hash::extract($all,"{n}.css.{$scope}.{n}"));
+
 		 return $this->Html->css($css); 		
 	}
 

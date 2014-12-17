@@ -60,7 +60,10 @@ $cakeDescription = 'ریتا : ';
 			
 				<div id="content">
 					<section class="content-header">
-						<div class="info"><?= $this->fetch('title'); ?></div>
+						<div class="info">
+                            <span class="action-title"><?= $this->fetch('title'); ?></span>
+                            <span class="action-note"><?= $this->fetch('note'); ?></span>
+                        </div>
 						<div class="actions"></div>
 					</section>
 					

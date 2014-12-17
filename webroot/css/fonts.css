@@ -32,20 +32,20 @@
 
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira';
     src: url('/rita/css/fonts/FiraSans-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira';
     src: url('/rita/css/fonts/FiraSans-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira';
     src: url('/rita/css/fonts/FiraSans-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
