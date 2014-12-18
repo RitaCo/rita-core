@@ -466,21 +466,84 @@ body {
       -ms-flex-direction: row ;
           flex-direction: row ;
 }
+#admin-header .options {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row ;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#admin-header .freebox {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.loginbox {
+  -webkit-flex: 0 1 250px;
+      -ms-flex: 0 1 250px;
+          flex: 0 1 250px;
+  background-color: #fafafa;
+  border-right: 1px solid silver;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row ;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.loginbox div {
+  border-radius: 50px;
+  background-color: #cfcfcf;
+  margin: 0px 20px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
 #logo {
   background: #FA113D;
+  -moz-user-select: none;
   color: white;
   width: 170px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
+  -webkit-flex-direction: row ;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #logo img {
   width: 47px;
-  margin: 0 auto;
-  display: block;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
+}
+#logo span {
+  font-family: WAmer;
+  font-size: 23px;
+  text-align: right;
+  padding-right: 0px;
+  padding-top: 5px;
+  -webkit-align-self: top;
+      -ms-flex-item-align: top;
+          align-self: top;
+  line-height: 1;
 }
 .admin-sidebar-wrapper {
   display: block;
@@ -535,7 +598,7 @@ body {
 #content .content-header .info .action-title {
   font-family: WFlat,Fira;
   display: block;
-  font-size: 30px;
+  font-size: 35px;
   color: #4E5C6C;
   letter-spacing: 0.5px;
   text-shadow: 2px 1px 2px #fff;
@@ -545,7 +608,7 @@ body {
   display: block;
   font-family: WIrans,Fira;
   font-weight: 100;
-  font-size: 15px;
+  font-size: 14px;
   padding-right: 40px;
   color: #444;
 }

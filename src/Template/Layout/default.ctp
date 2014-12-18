@@ -44,10 +44,17 @@ $cakeDescription = 'ریتا : ';
 		<header class="admin-header-wrapper">
 			<div id="admin-header">
 				<div id="logo">
-					<?= $this->Html->image('rita-logo-w.png'); ?>
+					<?= $this->Html->image('rita-logo-w.png'); ?> <span>۳</span>
 				</div>
-				<div >
-					ریتا
+				<div class="options" >
+  		            <div class="freebox">
+                    &nbsp;
+                        
+                    </div>
+					<div class="loginbox">
+                        <div>Z</div>
+                        <span>خوش آمدید</span>
+                    </div>
 				</div>
 			</div>
 		</header>
