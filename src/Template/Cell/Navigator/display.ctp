@@ -35,21 +35,21 @@
 							</ul>							
 						</li>
 						<li>
-							<a href="/admin">
+							<a href="/admin/userManger">
 								<div class="icon"><i class=" icon-homealt"></i></div>
 								<div class="label"><span>کاربران</span></div>
 							</a>
 							<ul class="menu-submenu">
 								<li>
-									<a href="/admin/users">
+									<a href="/admin/userManger/users">
 										<div class="icon"><i class=" icon-homealt"></i></div>
-										<div class="label"><span>گزارش</span></div>
+										<div class="label"><span>مدیریت اعضا</span></div>
 									</a>
 								</li>
 								<li>
-									<a href="/admin/users/magnements">
+									<a href="/admin/userManger/roles">
 										<div class="icon"><i class=" icon-news"></i></div>
-										<div class="label"><span>مدیریت</span></div>
+										<div class="label"><span>مدیریت نقش‌ها</span></div>
 									</a>
 								</li>
 								<li>
