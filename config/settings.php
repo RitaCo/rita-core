@@ -3,8 +3,11 @@
 return [
 	'css' => [
 		'base' => [
-			'Rita.Admin.css',
             'Rita.fonts.css'
-		]
+		],
+        'admin' => [
+            'Rita.Admin.css',
+            
+        ],
 	]
  ];

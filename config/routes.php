@@ -11,3 +11,9 @@ Router::prefix('admin',function($routes){
 	
 });
 
+Router::scope('/client',['section' => 'clients'],function($routes)
+{
+     	$routes->connect('/',['plugin' => 'Rita', 'controller' => 'Clients','action' => 'client']);
+    
+    
+});

@@ -52,7 +52,7 @@ $cakeDescription = 'ریتا : ';
                         
                     </div>
 					<div class="loginbox">
-                        <div>Z</div>
+                        <div><?= $this->Html->image('avator1.png'); ?></div>
                         <span>خوش آمدید</span>
                     </div>
 				</div>
