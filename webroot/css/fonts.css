@@ -1,30 +1,30 @@
 @font-face{
     font-family: 'WIrans';
-    src: url('/rita/css/fonts/iran/IRANSans.woff') format('woff');
+    src: url('fonts/iran/IRANSans.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 @font-face{
     font-family: 'WIrans';
-    src: url('/rita/css/fonts/iran/IRANSans-Black.woff') format('woff');
+    src: url('fonts/iran/IRANSans-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 @font-face{
     font-family: 'WIrans';
-    src: url('/rita/css/fonts/iran/IRANSans-Bold.woff') format('woff');
+    src: url('fonts/iran/IRANSans-Bold.woff') format('woff');
     font-weight: 700;
     font-style: bold;
 }
 @font-face{
     font-family: 'WIrans';
-    src: url('/rita/css/fonts/iran/IRANSans-Light.woff') format('woff');
+    src: url('fonts/iran/IRANSans-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 @font-face{
     font-family: 'WIrans';
-    src: url('/rita/css/fonts/iran/IRANSans-UltraLight.woff') format('woff');
+    src: url('fonts/iran/IRANSans-UltraLight.woff') format('woff');
     font-weight: 200;
     font-style: normal;
 }
@@ -33,35 +33,42 @@
 
 @font-face{
     font-family: 'Fira';
-    src: url('/rita/css/fonts/FiraSans-Light.woff') format('woff');
+    src: url('fonts/FiraSans-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 @font-face{
     font-family: 'Fira';
-    src: url('/rita/css/fonts/FiraSans-Regular.woff') format('woff');
+    src: url('fonts/FiraSans-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face{
     font-family: 'Fira';
-    src: url('/rita/css/fonts/FiraSans-Bold.woff') format('woff');
+    src: url('fonts/FiraSans-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 	@font-face {
 	    font-family: 'WIranianSans';
-	    src: url('/rita/css/fonts/IranianSansWeb-Regular.woff') format('woff');
+	    src: url('fonts/IranianSansWeb-Regular.woff') format('woff');
 	    font-weight: 400;
+	    font-style: normal;
+	
+	}
+	@font-face {
+	    font-family: 'WIranianSans';
+	    src: url('fonts/IranianSansWeb-Bold.woff') format('woff');
+	    font-weight: 700;
 	    font-style: normal;
 	
 	}
 	
 	@font-face {
 	    font-family: 'WIranianSans';
-	    src: url('/rita/css/fonts/IranianSans-light.woff') format('woff');
+	    src: url('fonts/IranianSans-light.woff') format('woff');
 	    font-weight: 300;
 	    font-style: normal;
 	
@@ -69,7 +76,7 @@
 
 		@font-face {
 	    font-family: 'WIranianSans';
-	    src: url('/rita/css/fonts/IranianSans-ExtraLight.woff') format('woff');
+	    src: url('fonts/IranianSans-ExtraLight.woff') format('woff');
 	    font-weight: 200;
 	    font-style: normal;
 	
@@ -78,7 +85,7 @@
 	
 	@font-face {
 	    font-family: 'WIranianSans';
-	    src: url('/rita/css/fonts/IranianSans-thin.woff') format('woff');
+	    src: url('fonts/IranianSans-thin.woff') format('woff');
 	    font-weight: 100;
 	    font-style: normal;
 	
@@ -86,7 +93,7 @@
 
 	@font-face {
 	    font-family: 'WIranianSerif';
-	    src: url('/rita/css/fonts/IranianSerifWeb.woff') format('woff');
+	    src: url('fonts/IranianSerifWeb-Regular.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	
@@ -118,7 +125,7 @@
 
 	@font-face {
 	    font-family: 'WBardia';
-	    src: url('/rita/css/fonts/BardiyaWeb-Regular.woff') format('woff');
+	    src: url('fonts/BardiyaWeb-Regular.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	
@@ -127,7 +134,7 @@
 	
 	@font-face {
 	    font-family: 'WMitra';
-	    src: url('/rita/css/fonts/MitraWeb-Regular.woff') format('woff');
+	    src: url('fonts/MitraWeb-Regular.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	
@@ -135,14 +142,14 @@
 	
 	@font-face {
 	    font-family: 'WMitra';
-	    src: url('/rita/css/fonts/MitraWeb-Bold.woff') format('woff');
+	    src: url('fonts/MitraWeb-Bold.woff') format('woff');
 	    font-weight: bold;
 	    font-style: normal;
 	}
 	
 	@font-face {
 	    font-family: 'WRoya';
-	    src: url('/rita/css/fonts/RoyaWeb-Regular.woff') format('woff');
+	    src: url('fonts/RoyaWeb-Regular.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	
@@ -150,7 +157,7 @@
 
 	@font-face {
 	    font-family: 'WRoya';
-	    src: url('/rita/css/fonts/RoyaWeb-Bold.woff') format('woff');
+	    src: url('fonts/RoyaWeb-Bold.woff') format('woff');
 	    font-weight: bold;
 	    font-style: normal;
 	
@@ -159,7 +166,7 @@
 	
 	@font-face {
 	    font-family: 'WTabassom';
-	    src: url('/rita/css/fonts/WebTabassom.woff') format('woff');
+	    src: url('fonts/WebTabassom.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
@@ -167,14 +174,14 @@
 	
 	@font-face {
 	    font-family: 'WTitr';
-	    src: url('/rita/css/fonts/TitrWeb.woff') format('woff');
+	    src: url('fonts/TitrWeb.woff') format('woff');
 	    font-weight: bold;
 	    font-style: normal;
 	}
 	
 	@font-face {
 	    font-family: 'WTitrTGE';
-	    src: url('/rita/css/fonts/TitrTGE-Web.woff') format('woff');
+	    src: url('fonts/TitrTGE-Web.woff') format('woff');
 	    font-weight: bold;
 	    font-style: normal;
 	}
@@ -182,14 +189,14 @@
 	
 	@font-face {
 	    font-family: 'WYekan';
-	    src:  url('/rita/css/fonts/YekanWeb-Regular.woff') format('woff');
+	    src:  url('fonts/YekanWeb-Regular.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	
 	@font-face {
 	    font-family: 'WYekan';
-	    src:  url('/rita/css/fonts/YekanWeb-Bold.woff') format('woff');
+	    src:  url('fonts/YekanWeb-Bold.woff') format('woff');
 	    font-weight: bold;
 	    font-style: normal;
 	}
@@ -197,7 +204,7 @@
 	
 	@font-face {
 	    font-family: 'WTraffic';
-	    src: url('/rita/css/fonts/TrafficWeb-Regular.woff') format('woff');
+	    src: url('fonts/TrafficWeb-Regular.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
@@ -205,14 +212,14 @@
 	
 	@font-face {
 	    font-family: 'WNasim';
-	    src: url('/rita/css/fonts/NasimWeb.woff') format('woff');
+	    src: url('fonts/NasimWeb.woff') format('woff');
 	    font-weight: bold;
 	    font-style: normal;
 	}
 	
 	@font-face {
 	    font-family: 'WKoodak';
-	    src: url('/rita/css/fonts/KoodakWeb-Regular.woff') format('woff');
+	    src: url('fonts/KoodakWeb-Regular.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
      	
@@ -220,7 +227,7 @@
 	
 	@font-face {
 	    font-family: 'WJoude';
-	    src: url('/rita/css/fonts/JoudeWeb.woff') format('woff');
+	    src: url('fonts/JoudeWeb.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
@@ -228,14 +235,14 @@
 
 	@font-face {
 	    font-family: 'WNazanin';
-	    src: url('/rita/css/fonts/NazaninWeb-Regular.woff') format('woff');
+	    src: url('fonts/NazaninWeb-Regular.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'WNazanin';
-	    src: url('/rita/css/fonts/NazaninWeb-Bold.woff') format('woff');
+	    src: url('fonts/NazaninWeb-Bold.woff') format('woff');
 	    font-weight: bold;
 	    font-style: normal;
 	}	
@@ -243,14 +250,14 @@
 	
 	@font-face {
 	    font-family: 'WAmer';
-	    src: url('/rita/css/fonts/AmerWeb-Regular.woff') format('woff');
+	    src: url('fonts/AmerWeb-Regular.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}	
 	
 	@font-face {
 	    font-family: 'WSilicon';
-	    src: url('/rita/css/fonts/Silicon-Thin.woff') format('woff');
+	    src: url('fonts/Silicon-Thin.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
