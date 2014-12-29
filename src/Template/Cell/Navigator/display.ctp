@@ -20,15 +20,15 @@
 									</a>
 								</li>
 								<li>
-									<a href="/admin/news">
+									<a href="/admin/requirements/calendars">
 										<div class="icon"><i class=" icon-news"></i></div>
 										<div class="label"><span>تقویم</span></div>
 									</a>
 								</li>
 								<li>
-									<a href="/admin">
+									<a href="/admin/requirements/notices">
 										<div class="icon"><i class=" icon-homealt"></i></div>
-										<div class="label"><span>تنظیمات</span></div>
+										<div class="label"><span>آگهی ها</span></div>
 									</a>
 								</li>
 						
