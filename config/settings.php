@@ -6,6 +6,7 @@ return [
             'Rita.fonts.css',
             'Rita.icons/icons.css',
             'Rita.animate.css',
+            'Rita.FrontBase.css',
 
 		],
         'admin' => [
