@@ -14,7 +14,7 @@
 							</a>
 							<ul class="menu-submenu">
 								<li>
-									<a href="/admin/requirements/categories">
+									<a href="/admin/requirements/notices">
 										<div class="icon"><i class=" icon-homealt"></i></div>
 										<div class="label"><span>آگهی ها</span></div>
 									</a>
@@ -26,9 +26,9 @@
 									</a>
 								</li>
 								<li>
-									<a href="/admin/requirements/notices">
+									<a href="/admin/requirements/categories">
 										<div class="icon"><i class=" icon-homealt"></i></div>
-										<div class="label"><span>آگهی ها</span></div>
+										<div class="label"><span>گروها</span></div>
 									</a>
 								</li>
 						
