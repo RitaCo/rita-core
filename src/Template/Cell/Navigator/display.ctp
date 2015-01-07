@@ -31,6 +31,12 @@
 										<div class="label"><span>گروها</span></div>
 									</a>
 								</li>
+								<li>
+									<a href="/admin/requirements/plans">
+										<div class="icon"><i class=" icon-pagesetup"></i></div>
+										<div class="label"><span>پلن‌ها</span></div>
+									</a>
+								</li>
 						
 							</ul>							
 						</li>

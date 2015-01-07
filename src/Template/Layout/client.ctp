@@ -3,23 +3,23 @@
 
 
     
-
+$this->start('user-nav');
 ?>
-<div class="ui-panel-border">
-    <div class="panel-body padding-none ">
-          <div class="ui-toolbar border-none">
-            <div class="toolbar-band">
+<div class="container">
+<div  id="client-navigator">
+    
+
                 <?php
                     //use \Cake\Event\EventManager;
                     //use \Cake\Event\Event;
                     $this->dispatchEvent('Client.Toolbar');                   
     
                 ?>               
-            </div>
-      </div>
     
-    </div>
+    
  </div>
-<br />
+ <br />
+ </div>
+<?= $this->end(); ?>
  
 <?= $this->fetch('content'); ?>

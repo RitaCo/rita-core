@@ -1,1 +1,62 @@
 @import "G:\xampp\htdocs\RitaLess\rita";
+
+
+#client-navigator{
+   // background-color: #fff;
+   
+    padding: 10px !important;
+    .flex-box();
+    .flex-col();
+
+
+
+   a{
+        width: 116px;
+        //height: 116px;
+        background-color: #3278B3;
+        margin: 5px 10px;
+        border-radius: 6px;
+        .flex-box();
+        .flex-row();
+        box-shadow:  0px 3px 10px rgba(0, 0, 0, 0.23), 0px 3px 10px rgba(0, 0, 0, 0.16);   
+        overflow: hidden;
+        position: relative;
+        padding: 15px 0px;
+        align-items:center;
+        align-content:center;
+        
+         .transition();  
+            
+            
+        i{
+            font-size: 35px;
+            color: #fff;
+            font-weight: 400;
+                 .transition();
+        }
+        
+        span{
+            font-family: wroya;
+            font-weight: 700;
+            font-size: 25px;
+            color: #f5f5f5;
+                .transition();
+            margin-top: 10px;
+        }
+   }
+   
+   a:hover{
+    .transition();
+    background-color: #4D9CDD;
+    
+        i{
+            text-shadow: 1px 1px 0px #000;
+                 .transition();
+        }
+        span{
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+                .transition();
+        }
+   }     
+}

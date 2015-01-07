@@ -429,9 +429,9 @@ a {
           flex: 0 0 auto !important;
 }
 .box-fluid {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 .bc-visible {
   overflow: visible !important;
@@ -731,9 +731,9 @@ a {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   padding: 10px;
   border-right: 10px solid transparent;
   border-bottom: none	;
@@ -777,9 +777,9 @@ a {
   background: white;
 }
 .com-input > .input-container > .dateSelect {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -952,7 +952,9 @@ div.submit {
 .btn {
   box-shadow: inset 1px 0px 0px rgba(255, 255, 255, 0.15), inset 0px 1px 0px rgba(255, 255, 255, 0.15), inset -1px 0px 0px rgba(255, 255, 255, 0.15), inset 0px -1px 0px rgba(255, 255, 255, 0.15);
   background: linear-gradient(to bottom, #fbfbfb, #e1e1e1);
-  display: inline-table;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
   border: 1px solid #b4b4b4;
   line-height: 28px;
@@ -1491,9 +1493,9 @@ button.btn-tiny {
   box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.5) inset !important;
   position: relative;
   white-space: normal;
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
@@ -1534,9 +1536,9 @@ button.btn-tiny {
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
-  -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .c-splitter-row {
   height: 6px;
@@ -1548,9 +1550,9 @@ button.btn-tiny {
   border-bottom-width: 1px;
   border-left: none;
   border-right: none;
-  -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .c-splitter-row.flat {
   background: #D8D8D8  !important;
@@ -1568,9 +1570,9 @@ button.btn-tiny {
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
-  -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .c-splitter-col2 {
   width: 20px;
@@ -1740,7 +1742,7 @@ button.btn-tiny {
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
-  padding: 10px;
+  padding: 2px;
 }
 .t {
   border: 1px dotted red;
@@ -1801,9 +1803,9 @@ button.btn-tiny {
 }
 .panel-header .header-caption,
 .ui-panel-framed > .panel-header .header-caption {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
@@ -1984,9 +1986,9 @@ button.btn-tiny {
   position: relative;
 }
 .ui-menu .label {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 .ui-menu .label span {
   color: #DCE2E6;
@@ -2197,4 +2199,63 @@ button.btn-tiny {
 .ui-dataGrid .table-footer td {
   border-top: 1px solid #aaa;
   padding: 3px 10px;
+}
+#client-navigator {
+  padding: 10px !important;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row ;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+}
+#client-navigator a {
+  width: 116px;
+  background-color: #3278B3;
+  margin: 5px 10px;
+  border-radius: 6px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column ;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.23), 0px 3px 10px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  position: relative;
+  padding: 15px 0px;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  transition: all 0.2s ease-in-out;
+}
+#client-navigator a i {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+}
+#client-navigator a span {
+  font-family: wroya;
+  font-weight: 700;
+  font-size: 25px;
+  color: #f5f5f5;
+  transition: all 0.2s ease-in-out;
+  margin-top: 10px;
+}
+#client-navigator a:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: #4D9CDD;
+}
+#client-navigator a:hover i {
+  text-shadow: 1px 1px 0px #000;
+  transition: all 0.2s ease-in-out;
+}
+#client-navigator a:hover span {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  transition: all 0.2s ease-in-out;
 }
