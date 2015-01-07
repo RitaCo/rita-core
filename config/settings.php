@@ -13,5 +13,14 @@ return [
             'Rita.Admin.css',
             
         ],
-	]
+	],
+    'js' => [
+        'base' => [
+            'Rita.jquery-2.1.1',
+            'Rita.RitaUI.js',
+            'Rita.Admin',
+            'Rita.jquery.sticky'
+        ]
+    ]
+    
  ];

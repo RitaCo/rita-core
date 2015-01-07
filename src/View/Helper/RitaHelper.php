@@ -15,6 +15,11 @@ class RitaHelper extends Helper {
 
 
 	
+	/**
+	 * RitaHelper::fetchSetting()
+	 * 
+	 * @return
+	 */
 	protected function fetchSetting() {
 		
 		if (($settings = Cache::read('settings','rita')) === false) {
@@ -36,36 +41,42 @@ class RitaHelper extends Helper {
 
 
 	/**
-	 * RitaHelper::script()
-	 * lt => Layout Top
-	 * lb => Layout Bottom
-	 * ct => Content Top
-	 * cb => Content Bottom 
-	 * @param string $type lt,lb,ct,cb 
-	 * @return void
+	 * RitaHelper::loadingJS()
+	 * 
+	 * @param bool $scope
+	 * @return
 	 */
-	public function includeJS($type){
-		$key = RitaRouter::currentStation() . '.script.' .$type;
-		$lists = Hash::get($this->_assets, $key);
-		 return $this->Html->script($lists,array('once' => true));
-		 
-	}
-
-
-	/**
-	 * RitaHelper::includeCSS()
-	 * lt => Layout Top
-	 * lb => Layout Bottom
-	 * ct => Content Top
-	 * cb => Content Bottom 
-	 * @param string $type lt,lb,ct,cb 
-	 * @return void
-	 */
-	public function css($scope = false){
+	public function loadingJS($scope = false)
+    {
 		$assets = \Cake\Core\Configure::read('assets');
+        
 		if(!$scope) {
 			$scope = ($this->request->param('prefix')) ? $this->request->param('prefix') : 'front';
 		}
+        
+		$all = $this->fetchSetting();
+		$css = Hash::extract($all,'{n}.js.base.{n}');
+		$css = array_merge($css, Hash::extract($all,"{n}.js.{$scope}.{n}"));
+
+		 return $this->Html->script($css); 		
+	}
+
+
+
+	/**
+	 * RitaHelper::css()
+	 * 
+	 * @param bool $scope
+	 * @return
+	 */
+	public function loadingCSS($scope = false)
+    {
+		$assets = \Cake\Core\Configure::read('assets');
+        
+		if(!$scope) {
+			$scope = ($this->request->param('prefix')) ? $this->request->param('prefix') : 'front';
+		}
+        
 		$all = $this->fetchSetting();
 		$css = Hash::extract($all,'{n}.css.base.{n}');
 		$css = array_merge($css, Hash::extract($all,"{n}.css.{$scope}.{n}"));

@@ -26,13 +26,17 @@ $cakeDescription = 'ریتا : ';
 	</title>
 	<?= $this->Html->meta('icon') ?>
 
-	<?= $this->Rita->css() ?>
+		<?= $this->Rita->loadingCSS() ?>
+		<?= $this->Rita->loadingJS() ?>
+        
 	<?= $this->Html->script([
 		'jquery-2.1.1',
 		'jquery.sticky',
 		'Admin'
 	]) ?>
 
+	
+		
 	<?= $this->fetch('meta') ?>
 	<?= $this->fetch('css') ?>
 	<?= $this->fetch('script') ?>
