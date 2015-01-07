@@ -16,10 +16,10 @@ return [
 	],
     'js' => [
         'base' => [
-            'Rita.jquery-2.1.1',
+
             'Rita.RitaUI.js',
-            'Rita.Admin',
-            'Rita.jquery.sticky'
+            'Rita.Admin.js',
+            'Rita.jquery.sticky.js'
         ]
     ]
     

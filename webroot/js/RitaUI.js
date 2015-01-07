@@ -100,4 +100,4 @@ $.fn.RitaTab = function(option){
 	}
 
 	
-});  
+});
