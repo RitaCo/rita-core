@@ -6,12 +6,26 @@ $(document).ready(function(){
   
 
     
-
+/**
+ * forms 
+ */
 $(document).on('click focus','.com-input','.error-message',function(){
 	$('.error-message',this).remove();
 })
 
+
+var RitaForm = $('form.com-form');
+
+var errors = $('.error-message', RitaForm).each(function(){
+   var prv = $(this).prev();
+   var pos = prv.offset(); 
+   var parent = $(this).parent();
+   $(this).css({left: pos.left-$(this).width()+20+"px" , top: prv.outerHeight(true)+15+"px" }).slideDown(); 
+});
 		     
+
+
+
 
 /**
 * tab components

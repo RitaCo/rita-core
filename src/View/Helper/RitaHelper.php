@@ -57,7 +57,7 @@ class RitaHelper extends Helper {
 		$all = $this->fetchSetting();
 		$css = Hash::extract($all,'{n}.js.base.{n}');
 		$css = array_merge($css, Hash::extract($all,"{n}.js.{$scope}.{n}"));
-       debug($css);
+  
 		 return $this->Html->script($css); 		
 	}
 
