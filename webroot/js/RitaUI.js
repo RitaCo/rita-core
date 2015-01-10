@@ -73,13 +73,16 @@ $.fn.RitaTab = function(option){
 		}
 		
 		
-		nav.on('RitaTab:show','li',showTab);
+		nav.on('RitaTab:show','li:not(.disabled)',showTab);
 		nav.on('RitaTab:hide','li',hideTab);
 		
 
-		nav.on('click','li',showTab)
-		var active = nav.find('li.active');
-		
+		nav.on('click','li:not(.disabled)',showTab)
+		var active = nav.find('li.active,li a.active');
+		nav.find('li a.disabled').each(function(){
+		  $(this).removeClass('disabled').parent().addClass('disabled');
+          
+		});
 		if(active.length == 0) {
 			active= 	nav.find('li').first();
 		}
@@ -93,7 +96,7 @@ $.fn.RitaTab = function(option){
 }
 
 
-	$('.wid-tab').RitaTab();
+	$('.ui-tab').RitaTab();
 	
 
 
