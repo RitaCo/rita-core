@@ -3,11 +3,13 @@ namespace Rita\Controller;
 
 use Rita\Controller\AppController;
 
-class ClientsController extends AppController {
+class ClientsController extends AppController
+{
 
 
 
-    public function client() {
+    public function client()
+    {
        
     }
-} 
+}

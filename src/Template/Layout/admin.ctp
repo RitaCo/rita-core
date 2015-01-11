@@ -18,28 +18,28 @@ $cakeDescription = 'ریتا : ';
 <!DOCTYPE html>
 <html dir="rtl">
 <head>
-	<?= $this->Html->charset() ?>
+    <?= $this->Html->charset() ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
-		<?= $cakeDescription ?>:
-		<?= $this->fetch('title') ?>
+    <?= $cakeDescription ?>:
+    <?= $this->fetch('title') ?>
 	</title>
-	<?= $this->Html->meta('icon') ?>
+    <?= $this->Html->meta('icon') ?>
 
-		<?= $this->Rita->loadingCSS() ?>
-		<?= $this->Rita->loadingJS() ?>
+    <?= $this->Rita->loadingCSS() ?>
+    <?= $this->Rita->loadingJS() ?>
         
-	<?= $this->Html->script([
-		'jquery-2.1.1',
-		'jquery.sticky',
-		'Admin'
-	]) ?>
+    <?= $this->Html->script([
+    'jquery-2.1.1',
+    'jquery.sticky',
+    'Admin'
+    ]) ?>
 
 	
 		
-	<?= $this->fetch('meta') ?>
-	<?= $this->fetch('css') ?>
-	<?= $this->fetch('script') ?>
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?>
 </head>
 <body>
 <div class="rita-viewport">
@@ -48,7 +48,7 @@ $cakeDescription = 'ریتا : ';
 		<header class="admin-header-wrapper">
 			<div id="admin-header">
 				<div id="logo">
-					<?= $this->Html->image('rita-logo-w.png'); ?> <span>۳</span>
+        <?= $this->Html->image('rita-logo-w.png'); ?> <span>۳</span>
 				</div>
 				<div class="options" >
   		            <div class="freebox">
@@ -65,7 +65,7 @@ $cakeDescription = 'ریتا : ';
 		
 		
 		<section class="admin-body-wrapper">
-			<?= $this->cell('Rita.Navigator'); ?>	
+    <?= $this->cell('Rita.Navigator'); ?>	
 			
 			<div class="admin-content-wrapper">
 			
@@ -81,7 +81,7 @@ $cakeDescription = 'ریتا : ';
 					<section class="content-flash"><?= $this->Flash->render() ?></section>
 					
 					<section class="content-body">
-						<?= $this->fetch('content') ?>
+        <?= $this->fetch('content') ?>
 					</section>
 				</div>
 

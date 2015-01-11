@@ -12,7 +12,7 @@ $this->start('user-nav');
                 <?php
                     //use \Cake\Event\EventManager;
                     //use \Cake\Event\Event;
-                    $this->dispatchEvent('Client.Toolbar');                   
+                    $this->dispatchEvent('Client.Toolbar');
     
                 ?>               
     
@@ -22,4 +22,4 @@ $this->start('user-nav');
  </div>
 <?= $this->end(); ?>
  
-<?= $this->fetch('content'); ?>
+<?= $this->fetch('content'); 

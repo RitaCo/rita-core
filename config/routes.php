@@ -1,17 +1,17 @@
 <?php
 use Cake\Routing\Router;
 
-Router::prefix('admin',function($routes){
+Router::prefix('admin', function($routes){
 
-	$routes->connect('/', ['controller' => 'Dashboard', 'action' => 'index','plugin'=>'Rita']);
+    $routes->connect('/', ['controller' => 'Dashboard', 'action' => 'index','plugin'=>'Rita']);
 
 
-	
+    
 });
 
-Router::scope('/client',['section' => 'clients'],function($routes)
+Router::scope('/client', ['section' => 'clients'], function($routes)
 {
-     	$routes->connect('/',['plugin' => 'Rita', 'controller' => 'Clients','action' => 'client']);
+         $routes->connect('/', ['plugin' => 'Rita', 'controller' => 'Clients','action' => 'client']);
     
     
 });
