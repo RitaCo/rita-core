@@ -75,7 +75,7 @@ $cakeDescription = 'ریتا : ';
                             <span class="action-title"><?= $this->fetch('title'); ?></span>
                             <span class="action-note"><?= $this->fetch('note'); ?></span>
                         </div>
-						<div class="actions"></div>
+						<div class="actions"><?= $this->fetch('Page.Action'); ?></div>
 					</section>
 					
 					<section class="content-flash"><?= $this->Flash->render() ?></section>

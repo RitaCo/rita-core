@@ -7,6 +7,7 @@
 html{
     	font-family: "wIranianSans","Fira Sans";
 	font-size: 14px;
+    font-size-adjust: 100%;
 
 }
 body{
@@ -61,6 +62,7 @@ body{
 
 #admin-header{
 	background-color: #fff;
+	box-shadow:0px -3px 7px 5px rgba(0, 0, 0, 0.39);
 	position: fixed;
 	top: 0px;
 	z-index: 10;
@@ -150,7 +152,7 @@ body{
 	display: block;
 	position: relative;
 //	border-left: 1px solid #000;
-//	box-shadow: -8px 0 9px -4px rgba(0, 0, 0, 0.39);	
+	
 	width: @sidebar-width;
 	background-color: @wid-menu-bg;
 
@@ -169,7 +171,7 @@ body{
 .admin-content-wrapper{
 	border-top: 1px solid #e3e3e3;
 	border-right: 1px solid #e3e3e3;
-	.flex(1);
+	.flex(1,1,0);
 	.flex-box();
 	.flex-row();	
 	
@@ -185,7 +187,8 @@ body{
 	.content-header{
 		.flex-box();
 		.flex-col();
-	//	background-color: #f5f5f5;
+		background-color: #DFDFDF;
+        border-bottom: 1px solid #d0d0d0;
 		.info{
 			.flex(1);
 			padding: 25px 70px 25px 0px;
@@ -213,23 +216,38 @@ body{
                  padding-right: 70px;
                  color: #444;
             }
-		}	
+		}
+        .actions{
+            padding: 24px 0px 25px 70px;
+            align-self: center;
+                    	.flex-box();
+	           .flex-col();
+            a{
+              .btn;  
+              flex:1;
+            }
+                            
+        }	
 	}
 	.content-flash{
 		
 		padding: 20px 50px;
 		
 
-		
+		border-bottom: 1px solid #fff;
 		font-family: wtitr;
 		font-size: 20px;
 		color: red;
 	}
 	.content-flash:empty{
-		display: none;
+	           border-bottom: 1px solid #fff;
+		border-top: ;
+        padding: 0px;
 	}
 	.content-body{
-		padding: 20px;
+		padding: 50px;
+        	.flex-box();
+	.flex-row();
 		.flex(1);
 	}
 }
