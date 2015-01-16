@@ -2532,6 +2532,33 @@ button.btn-tiny {
   border-top: 1px solid #aaa;
   padding: 3px 10px;
 }
+.ui-paginator {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row ;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+  list-style: none;
+  margin: 10px 0px;
+  padding: 5px;
+  border: 1px solid #c9c9c9;
+  background-color: #f1f1f1;
+}
+.ui-paginator [class^="page-"] + [class^="page-"] {
+  margin-right: 5px;
+}
+.ui-paginator > .page-status {
+  background-color: #ffffff;
+  border: 1px solid #c9c9c9;
+  padding: 5px;
+  font-size: 14px;
+}
+.ui-paginator .page-status {
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
 /**
  * 
  */

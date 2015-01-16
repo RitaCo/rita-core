@@ -7,3 +7,4 @@ app/[Cc]onfig/database.php
 webroot/css/fonts/*
 !empty
 webroot/prepros.cfg
+webroot/prepros.cfg
