@@ -501,14 +501,14 @@ p {
   position: relative;
 }
 .com-layout.typ-row {
-  -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 .com-layout.typ-col {
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
 }
 .com-layout.typ-col > .layout-splitter {
   border-color: #bbb;
@@ -545,9 +545,9 @@ p {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 .com-layout-columns {
   display: -webkit-flex;
@@ -556,9 +556,9 @@ p {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 .com-layout-columns > .layout-cell {
   -webkit-flex: 1;
@@ -696,7 +696,7 @@ p {
   border-right: none;
 }
 .com-form {
-  padding: 0;
+  padding: 0px;
   position: relative;
   background-color: #fafafa;
 }
@@ -710,9 +710,9 @@ p {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   position: realtive;
   border-bottom: 1px solid #ddd;
 }
@@ -720,7 +720,6 @@ p {
   border-left: 1px solid #fff;
   border-right: 1px solid #ddd;
   border-bottom: none;
-  position: relative;
 }
 .com-form .form-col .com-input:first-child {
   border-right: none;
@@ -733,7 +732,7 @@ p {
   border-bottom: none;
 }
 .form-bg-none .com-input {
-  background: none;
+  background-color: none;
   border-top: none ;
 }
 .com-input {
@@ -790,9 +789,9 @@ p {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -818,19 +817,20 @@ p {
 .com-input > .input-container > textarea,
 .com-input > .input-container > select {
   border: 1px solid #bbb;
-  border-radius: 3px;
+  border-radius: 0px;
   position: relative;
   font-size: 16px;
+  font-family: wiraniansans,Fira Sans;
   color: #555;
-  box-shadow: 0px 0px 5px 0px #DCDCDC inset;
-  background: #fdfdfd;
+  box-shadow: 1px 1px 3px 0px #DCDCDC inset;
+  background-color: #fdfdfd;
   background-clip: padding-box;
 }
 .com-input > .input-container > input:focus,
 .com-input > .input-container > textarea:focus,
 .com-input > .input-container > select:focus {
   box-shadow: 0px 0px 2px 0px #DCDCDC inset;
-  background: white;
+  background-color: white;
 }
 .com-input > .input-container > .dateSelect {
   -webkit-flex: 1 0 auto;
@@ -848,25 +848,25 @@ p {
   border-radius: 3px;
   color: #555;
   box-shadow: 0px 0px 5px 0px #DCDCDC inset;
-  background: #fdfdfd;
+  background-color: #fdfdfd;
   background-clip: padding-box;
 }
 .com-input > .input-container > .dateSelect select:focus {
   box-shadow: 0px 0px 2px 0px #DCDCDC inset;
-  background: white;
+  background-color: white;
 }
 .com-input > .input-container > input[type='text'],
 .com-input > .input-container > input[type='email'],
 .com-input > .input-container > input[type='password'],
 .com-input > .input-container > textarea {
-  padding: 2px 10px;
+  padding: 5px 10px;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 .com-input > .input-container select option {
-  padding: 2px 10px;
-  font-size: 12px;
+  padding: 5px 10px;
+  font-size: 14px;
 }
 .form-v .com-input .input-container,
 .com-input.form-v .input-container {
@@ -2683,9 +2683,8 @@ body {
 }
 .admin-container {
   position: relative;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
-  min-height: 400px;
   display: block;
   display: -webkit-flex;
   display: -ms-flexbox;
