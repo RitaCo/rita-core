@@ -37,7 +37,12 @@
 										<div class="label"><span>پلن‌ها</span></div>
 									</a>
 								</li>
-						
+								<li>
+									<a href="/admin/requirements/archives">
+										<div class="icon"><i class="icon-stacks"></i></div>
+										<div class="label"><span>آرشیو چاپی</span></div>
+									</a>
+								</li>						
 							</ul>							
 						</li>
 						<li>

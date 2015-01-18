@@ -29,11 +29,6 @@ $cakeDescription = 'ریتا : ';
     <?= $this->Rita->loadingCSS() ?>
     <?= $this->Rita->loadingJS() ?>
         
-    <?= $this->Html->script([
-    'jquery-2.1.1',
-    'jquery.sticky',
-    'Admin'
-    ]) ?>
 
 	
 		

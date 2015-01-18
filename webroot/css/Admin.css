@@ -710,9 +710,9 @@ p {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   position: realtive;
   border-bottom: 1px solid #ddd;
 }
@@ -720,6 +720,9 @@ p {
   border-left: 1px solid #fff;
   border-right: 1px solid #ddd;
   border-bottom: none;
+  -webkit-flex: 1 1 50%;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
 }
 .com-form .form-col .com-input:first-child {
   border-right: none;
@@ -802,7 +805,7 @@ p {
   text-align: right;
   position: relative;
 }
-.com-input > .input-container > label {
+.com-input > .input-container label {
   color: #222;
   font-family: Wirans,Fira Sans;
   font-size: 14px;
@@ -813,26 +816,27 @@ p {
   white-space: nowrap;
   word-wrap: normal;
 }
-.com-input > .input-container > input,
-.com-input > .input-container > textarea,
-.com-input > .input-container > select {
+.com-input > .input-container input,
+.com-input > .input-container textarea,
+.com-input > .input-container select {
   border: 1px solid #bbb;
   border-radius: 0px;
   position: relative;
-  font-size: 16px;
+  font-size: 14px;
   font-family: wiraniansans,Fira Sans;
-  color: #555;
+  color: #717D90;
   box-shadow: 1px 1px 3px 0px #DCDCDC inset;
   background-color: #fdfdfd;
   background-clip: padding-box;
 }
-.com-input > .input-container > input:focus,
-.com-input > .input-container > textarea:focus,
-.com-input > .input-container > select:focus {
+.com-input > .input-container input:focus,
+.com-input > .input-container textarea:focus,
+.com-input > .input-container select:focus {
   box-shadow: 0px 0px 2px 0px #DCDCDC inset;
   background-color: white;
+  color: #222;
 }
-.com-input > .input-container > .dateSelect {
+.com-input > .input-container .dateSelect {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -843,7 +847,7 @@ p {
       -ms-flex-direction: row ;
           flex-direction: row ;
 }
-.com-input > .input-container > .dateSelect select {
+.com-input > .input-container .dateSelect select {
   border: 1px solid #bbb;
   border-radius: 3px;
   color: #555;
@@ -851,22 +855,28 @@ p {
   background-color: #fdfdfd;
   background-clip: padding-box;
 }
-.com-input > .input-container > .dateSelect select:focus {
+.com-input > .input-container .dateSelect select:focus {
   box-shadow: 0px 0px 2px 0px #DCDCDC inset;
   background-color: white;
 }
-.com-input > .input-container > input[type='text'],
-.com-input > .input-container > input[type='email'],
-.com-input > .input-container > input[type='password'],
-.com-input > .input-container > textarea {
+.com-input > .input-container input[type='text'],
+.com-input > .input-container input[type='email'],
+.com-input > .input-container input[type='password'],
+.com-input > .input-container textarea {
   padding: 5px 10px;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 .com-input > .input-container select option {
-  padding: 5px 10px;
+  padding: 5px 5px;
+  margin: 2px 5px;
   font-size: 14px;
+  color: #000;
+}
+.com-input > .input-container select option:disabled {
+  color: #555;
+  background-color: #DBE3FF;
 }
 .form-v .com-input .input-container,
 .com-input.form-v .input-container {
@@ -1526,6 +1536,12 @@ button.btn-tiny {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
+.body-footer .btn {
+  box-shadow: 2px 2px 1px #ccc !important;
+}
+.body-footer .btn:focus {
+  box-shadow: inset 2px 2px 1px #ccc !important;
+}
 .body-header + .body-container,
 .body-header + [class^="wid-"] {
   border-top: 1px solid #b9b9b9;
@@ -1913,7 +1929,6 @@ button.btn-tiny {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  white-space: initial;
 }
 .panel-body.type-col {
   -webkit-flex-direction: row  !important;
@@ -2672,7 +2687,6 @@ text- .ui-paginator .page-status .numbers a:hover {
 html {
   font-family: "wIranianSans", "Fira Sans";
   font-size: 14px;
-  font-size-adjust: 100%;
 }
 body {
   background: #EAEBEE;
@@ -2683,7 +2697,7 @@ body {
 }
 .admin-container {
   position: relative;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   display: block;
   display: -webkit-flex;
@@ -2943,13 +2957,11 @@ body {
 }
 #content .content-flash {
   padding: 20px 50px;
-  border-bottom: 1px solid #fff;
   font-family: wtitr;
   font-size: 20px;
   color: red;
 }
 #content .content-flash:empty {
-  border-bottom: 1px solid #fff;
   border-top: ;
   padding: 0px;
 }
