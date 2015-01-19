@@ -46,10 +46,7 @@ $cakeDescription = 'ریتا : ';
         <?= $this->Html->image('rita-logo-w.png'); ?> <span>۳</span>
 				</div>
 				<div class="options" >
-  		            <div class="freebox">
-                    &nbsp;
-                        
-                    </div>
+  		            <div class="freebox"></div>
 					<div class="loginbox">
                         <div><?= $this->Html->image('avator1.png'); ?></div>
                         <span>خوش آمدید</span>

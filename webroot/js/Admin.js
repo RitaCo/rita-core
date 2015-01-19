@@ -17,7 +17,7 @@ function menu(){
  
  
  var li = $('li:has(ul)',menu);
- console.log(li);
+
  $(li).on('click','a',function(){
  	$(this).parent('li').toggleClass('isOpened').find('ul').slideToggle();
  })

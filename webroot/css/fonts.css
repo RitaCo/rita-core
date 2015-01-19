@@ -4,17 +4,6 @@
     font-weight: 400;
     font-style: normal;
 }
-
-@font-face{
-    font-family: 'WNast';
-    src: url('fonts/IranNastaliq-Web.woff2') format('woff2'),
-     url('fonts/IranNastaliq-Web.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-
-IranNastaliq-Web.woff2
 @font-face{
     font-family: 'WIrans';
     src: url('fonts/iran/IRANSans-Black.woff') format('woff');
@@ -25,7 +14,7 @@ IranNastaliq-Web.woff2
     font-family: 'WIrans';
     src: url('fonts/iran/IRANSans-Bold.woff') format('woff');
     font-weight: 700;
-    font-style: bold;
+    font-style: normal;
 }
 @font-face{
     font-family: 'WIrans';

@@ -4,7 +4,7 @@
 	    src: url('WebHostingHubGlyphs.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
-	    -moz-font-feature-settings: "calt=0,liga=0";
+	    font-feature-settings: "calt" 0, "liga" 0;
 	   -webkit-font-feature-settings: "calt=0,liga=0";
 	}
 
