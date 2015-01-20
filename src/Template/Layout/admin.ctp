@@ -47,10 +47,7 @@ $cakeDescription = 'ریتا : ';
 				</div>
 				<div class="options" >
   		            <div class="freebox"></div>
-					<div class="loginbox">
-                        <div><?= $this->Html->image('avator1.png'); ?></div>
-                        <span>خوش آمدید</span>
-                    </div>
+					<?= $this->element('RitaUsers.box-login-info'); ?>
 				</div>
 			</div>
 		</header>
@@ -78,7 +75,7 @@ $cakeDescription = 'ریتا : ';
 				</div>
 
 				<div class="admin-footer-wrapper">
-					<span>نسخه پیش نمایش : اول</span>
+					<span>ویرایش : ۳.۰.۱</span>
 				</div>
 	
 			</div>
