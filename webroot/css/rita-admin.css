@@ -973,6 +973,9 @@ select:focus {
       -ms-flex: 1;
           flex: 1;
 }
+.com-input > .input-container input[type='file'] {
+  width: 50%;
+}
 .com-input > .input-container select > option {
   /**
              * fire fox hang if padding:5px 5px; 
