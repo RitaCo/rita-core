@@ -15,9 +15,17 @@
 							<ul class="menu-submenu">
 								<li>
 									<a href="/admin/requirements/notices">
-										<div class="icon"><i class=" icon-homealt"></i></div>
+										<div class="icon"><i class="  icon-list-alt"></i></div>
 										<div class="label"><span>آگهی ها</span></div>
 									</a>
+                                    <ul class="menu-submenu">
+        								<li>
+        									<a href="/admin/requirements/notices/vaidate">
+        										<div class="icon"><i class=" icon-programok"></i></div>
+        										<div class="label"><span>آگهی‌های تازه/ویرایش شده</span></div>
+        									</a>
+        								</li>
+                                    </ul>
 								</li>
 								<li>
 									<a href="/admin/requirements/calendars">
