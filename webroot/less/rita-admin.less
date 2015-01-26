@@ -12,7 +12,7 @@ html{
 }
 body{
 	background: #EAEBEE;
-	
+    	
 
 	color: #000;
 }
@@ -26,6 +26,7 @@ body{
 	position: relative;
 	min-height: 100%;
 	width: 100%;
+    
 	overflow: hidden;
 	display: block;
 	.flex-box();
@@ -62,7 +63,7 @@ body{
 
 .admin-body-wrapper{
 	position: relative;
-	.flex(1,1,0%);
+	.flex(1,1,auto);
 	.flex-box();
 	.flex-col();
 }
@@ -136,7 +137,7 @@ body{
 //	border-left: 1px solid #000;
 	position: relative;
     z-index: 5;
-	width: @sidebar-width;
+	flex: 0 0 @sidebar-width;
 	background-color: @wid-menu-bg;
 
 }
@@ -154,7 +155,7 @@ body{
 .admin-content-wrapper{
 	border-top: 1px solid #e3e3e3;
 	border-right: 1px solid #e3e3e3;
-	.flex(1,1,0%);
+	.flex(1,1,auto);
 	.flex-box();
 	.flex-row();	
 	
@@ -228,10 +229,18 @@ body{
         padding: 0px;
 	}
 	.content-body{
-		padding: 50px;
+		padding: 40px 35px;
         	.flex-box();
 	.flex-row();
-		.flex(1);
+		.flex(1,1,auto);
 	}
 }
 
+
+@media (max-width: 650px) {
+
+#content  .content-body{
+	   padding: 25px;
+       }
+	
+}
