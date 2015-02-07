@@ -47,7 +47,7 @@ $cakeDescription = 'ریتا : ';
 				</div>
 				<div class="options" >
   		            <div class="freebox"></div>
-					<?= $this->element('RitaUsers.box-login-info'); ?>
+					<?= $this->element('Rita/Users.box-login-info'); ?>
 				</div>
 			</div>
 		</header>

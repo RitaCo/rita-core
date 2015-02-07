@@ -92,18 +92,7 @@
 										<div class="label"><span>حسابداری</span></div>
 									</a>
 								</li>
-								<li>
-									<a href="/admin/userManger/roles">
-										<div class="icon"><i class=" icon-news"></i></div>
-										<div class="label"><span>مدیریت نقش‌ها</span></div>
-									</a>
-								</li>
-								<li>
-									<a href="/admin/users/settings">
-										<div class="icon"><i class=" icon-homealt"></i></div>
-										<div class="label"><span>تنظیمات</span></div>
-									</a>
-								</li>
+							   
 						
 							</ul>								                            
 						</li>
@@ -113,6 +102,7 @@
 								<div class="label"><span>تنظیمات</span></div>
 							</a>
 						</li>
+                          <?= $this->element('Rita/JobQueue.Admin\menu'); ?>
 					</ul>
 				</div>
 			</div>	
