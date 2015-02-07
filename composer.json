@@ -1,5 +1,5 @@
 {
-	"name": "ritaco/rita",
+	"name": "ritaco/core",
 	"type": "cakephp-plugin",
 	"description": "This is base of Rita App Templates",
 	"keywords": ["cakephp",  "Rita"],
@@ -14,19 +14,17 @@
 		}
 	],
 	"require":{
-		"php": ">=5.4",
-        "cakephp/plugin-installer": "0.0.1",
-		"cakephp/cakephp": "3.0.*-dev"
+        "php": ">=5.4",
+        "cakephp/cakephp": "3.0.x-dev"
 	},
 	"autoload": {
 		"psr-4": {
-			"Rita\\": "src"
+			"Rita\\Core\\": "src"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Rita\\Test\\": "tests",
-			"Cake\\Test\\Fixture\\": "vendor/cakephp/cakephp/tests/Fixture"
+			"Rita\\Core\\Test\\": "tests",
 		}
 	},
 	"support":{
@@ -34,6 +32,6 @@
 		"issues": "https://github.com/RitaCo/rita-core/issues"
 	},
 	"extra": {
-		"installer-name": "Rita"
+		"installer-name": "Rita/Core"
 	}
 }
