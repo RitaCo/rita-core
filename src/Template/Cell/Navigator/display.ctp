@@ -20,7 +20,7 @@
 									</a>
                                     <ul class="menu-submenu">
         								<li>
-        									<a href="/admin/requirements/notices/vaidate">
+        									<a href="/admin/requirements/notices/recheck">
         										<div class="icon"><i class=" icon-programok"></i></div>
         										<div class="label"><span>آگهی‌های تازه/ویرایش شده</span></div>
         									</a>
@@ -29,7 +29,7 @@
 								</li>
 								<li>
 									<a href="/admin/requirements/calendars">
-										<div class="icon"><i class=" icon-news"></i></div>
+										<div class="icon"><i class="fa fa-calendar"></i></div>
 										<div class="label"><span>تقویم</span></div>
 									</a>
 								</li>
@@ -55,13 +55,13 @@
 						</li>
 						<li>
 							<a href="/admin/userManger">
-								<div class="icon"><i class=" icon-homealt"></i></div>
+								<div class="icon"><i class=" fa fa-users"></i></div>
 								<div class="label"><span>کاربران</span></div>
 							</a>
 							<ul class="menu-submenu">
 								<li>
 									<a href="/admin/userManger/users">
-										<div class="icon"><i class=" icon-homealt"></i></div>
+										<div class="icon"><i class=" fa fa-user"></i></div>
 										<div class="label"><span>مدیریت اعضا</span></div>
 									</a>
 								</li>
@@ -80,29 +80,16 @@
 						
 							</ul>								
 						</li>
-						<li>
-							<a href="/admin">
-								<div class="icon"><i class=" icon-homealt"></i></div>
-								<div class="label"><span>سرویس ها</span></div>
-							</a>
-                            <ul class="menu-submenu">
-								<li>
-									<a href="/admin/accunting">
-										<div class="icon"><i class=" icon-money-cash"></i></div>
-										<div class="label"><span>حسابداری</span></div>
-									</a>
-								</li>
-							   
-						
-							</ul>								                            
-						</li>
+                        <?=  $this->element('Rita/Accunting.Admin\menu'); ; ?>
 						<li>
 							<a href="/admin">
 								<div class="icon"><i class=" icon-homealt"></i></div>
 								<div class="label"><span>تنظیمات</span></div>
 							</a>
 						</li>
-                          <?= $this->element('Rita/JobQueue.Admin\menu'); ?>
+                          <?php 
+                            //$this->element('Rita/JobQueue.Admin\menu'); 
+                            ?>
 					</ul>
 				</div>
 			</div>	
