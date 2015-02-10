@@ -1082,6 +1082,9 @@
 .menu-submenu .icon {
   padding: 0 5px 0 10px;
 }
+.menu-submenu .icon i {
+  color: red;
+}
 .ui-menu > li:hover > .menu-submenu,
 .menu-submenu li:hover > .menu-submenu {
   display: block;

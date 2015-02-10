@@ -80,7 +80,7 @@
 						
 							</ul>								
 						</li>
-                        <?=  $this->element('Rita/Accunting.Admin\menu'); ; ?>
+                        <?=  $this->element('Rita/Accunting.Admin/menu'); ; ?>
 						<li>
 							<a href="/admin">
 								<div class="icon"><i class=" icon-homealt"></i></div>
