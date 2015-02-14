@@ -67,10 +67,10 @@
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
-.body-footer .btn {
+.body-footer > .btn {
   box-shadow: 2px 2px 1px #ccc !important;
 }
-.body-footer .btn:focus {
+.body-footer > .btn:focus {
   box-shadow: inset 2px 2px 1px #ccc !important;
 }
 /**
@@ -339,10 +339,10 @@
   margin: 0px;
   margin-left: 10px;
   color: #666;
-  font-size: 25px;
+  font-size: 15px;
 }
 .toolbar-band > .btn span {
-  font-size: 17px;
+  font-size: 14px;
   font-family: wamer;
   font-weight: 400;
 }
@@ -527,7 +527,7 @@
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
-  font-family: WMofid;
+  font-family: WMofid, Fira;
   font-style: normal;
   font-size: 22px;
   border-top-left-radius: inherit;
@@ -1083,7 +1083,7 @@
   padding: 0 5px 0 10px;
 }
 .menu-submenu .icon i {
-  color: red;
+  color: #f69a9a;
 }
 .ui-menu > li:hover > .menu-submenu,
 .menu-submenu li:hover > .menu-submenu {
@@ -1138,7 +1138,6 @@
   text-shadow: 1px 1px 1px #ccc;
   font-family: WAmer, "Fira";
   font-size: 12px;
-  font-size-adjust: 0.5;
   font-weight: 400;
   font-size: 13px;
 }
@@ -1346,4 +1345,55 @@
           transform: translate(0, 36px);
   opacity: 0;
   transition: all 0.2s ease-in-out;
+}
+.ui-lists,
+.ui-list-items {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column ;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
+}
+.ui-lists > .list-row {
+  margin: 2px;
+  padding: 2px 5px;
+}
+.ui-lists > .list-row:nth-child(2n+2) {
+  background-color: #f7f7f7;
+}
+.ui-list-items {
+  border: 1px solid #d7d7d7;
+  padding: 2px;
+}
+.ui-list-items > .list-row {
+  margin: 2px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row ;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+}
+.ui-list-items > .list-row > *:first-child {
+  background-color: #E4DAC2;
+  color: #082d32;
+  font-family: wroya;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  -webkit-flex: 0 1 0%;
+      -ms-flex: 0 1 0%;
+          flex: 0 1 0%;
+  min-width: 45%;
+  padding: 4px 10px;
+}
+.ui-list-items > .list-row > *:last-child {
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  padding: 4px 10px;
+  color: #5A6166;
+  font-family: wiraniansans,fira;
+  font-size: 15px;
 }
