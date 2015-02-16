@@ -1,37 +1,38 @@
 {
-	"name": "ritaco/core",
-	"type": "cakephp-plugin",
-	"description": "This is base of Rita App Templates",
-	"keywords": ["cakephp",  "Rita"],
-	"homepage": "https://github.com/RitaCo/rita-core",
-	"license": "MIT",
-	"version": "3.0.0-dev",
-	"authors": [
-		{
-			"name": "Saleh Souzanchi",
-			"role": "Author",
-			"homepage": "http://www.ritaco.net"
-		}
-	],
-	"require":{
+    "name": "ritaco/core",
+    "type": "cakephp-plugin",
+    "description": "This is base of Rita App Templates",
+    "keywords": ["cakephp",  "Rita"],
+    "homepage": "https://github.com/RitaCo/rita-core",
+    "license": "MIT",
+    "version": "3.0.0-dev",
+    "authors": [
+        {
+            "name": "Saleh Souzanchi",
+            "role": "Author",
+            "homepage": "http://soozanchi.ir"
+        }
+    ],
+    "require":{
         "php": ">=5.4",
         "cakephp/cakephp": "3.0.x-dev"
-	},
-	"autoload": {
-		"psr-4": {
-			"Rita\\Core\\": "src"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"Rita\\Core\\Test\\": "tests"
-		}
-	},
-	"support":{
-		"source": "https://github.com/RitaCo/rita-core",
-		"issues": "https://github.com/RitaCo/rita-core/issues"
-	},
-	"extra": {
-		"installer-name": "Rita/Core"
-	}
+    },
+    "autoload": {
+        "psr-4": {
+            "Rita\\Core\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rita\\Core\\Test\\": "tests"
+        }
+    },
+    "support":{
+        "source": "https://github.com/RitaCo/rita-core",
+        "issues": "https://github.com/RitaCo/rita-core/issues"
+    },
+    "extra": {
+        "installer-name": "Rita/Core"
+    },
+    minimum-stability: "dev"
 }
