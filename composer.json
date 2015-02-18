@@ -34,5 +34,5 @@
     "extra": {
         "installer-name": "Rita/Core"
     },
-    minimum-stability: "dev"
+    "minimum-stability": "dev"
 }
