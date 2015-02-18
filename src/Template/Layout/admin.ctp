@@ -54,7 +54,7 @@ $cakeDescription = 'ریتا : ';
 		
 		
 		<section class="admin-body-wrapper">
-    <?= $this->cell('Rita/Core.Navigator'); ?>	
+            <?= $this->element('Rita/Core.Admin/Navigator/main-left'); ?>	
 			
 			<div class="admin-content-wrapper">
 			

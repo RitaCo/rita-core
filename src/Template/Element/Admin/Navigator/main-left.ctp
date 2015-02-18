@@ -1,3 +1,9 @@
+<?php
+
+
+
+?>
+
 			<div class="admin-sidebar-wrapper">
 				<div  class="admin-navigator-container">		
 					<ul id="sticker" class="ui-menu">
