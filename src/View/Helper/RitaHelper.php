@@ -16,6 +16,9 @@ class RitaHelper extends Helper
     protected $_assets = [];
 
 
+
+
+
     
     /**
      * RitaHelper::fetchSetting()
@@ -94,7 +97,7 @@ class RitaHelper extends Helper
      * @param mixed $title
      * @return
      */
-    public function pageTitle($title = null)
+    public function pageTitle1($title = null)
     {
         
         $title = ($title !== null)? $title : RitaConfig::read('Meta.title');
@@ -157,26 +160,69 @@ class RitaHelper extends Helper
         return $this->Html->getCrumbList(array('separator'=>'<span>/</span>'), array('text' => 'مدیریت','url'=>'doshboard'));
     }
 
+    /**
+     * RitaHelper::pageTitle()
+     * 
+     * @param mixed $siteTitle
+     * @param mixed $options
+     * @return void
+     */
+    public function pageTitle($siteTitle = null, $options = [])
+    {
+        $title = [];
+        
+        if(!empty($siteTitle)) {
+            $title[] = $siteTitle;
+            $title[] = ' | ';
+        } 
+        
+        $title[] = $this->_View->fetch('title');
+        
+        $title = implode('',$title);
+        
+        return '<title>'.$title . '</title>';
+    }
+
   
 
+
     /**
-     * RitaHelper::metaDescription()
-     *
+     * RitaHelper::pageDescription()
+     * 
+     * @param string $text
      * @return
      */
-    public function metaDescription()
+    public function pageDescription($text = '')
     {
-        return Configure::read('Rita.Site.description');
+        $text = $this->_View->fetch('description', $text);
+        
+        return $this->Html->meta('description', $text);
     }
+
 
     /**
      * RitaHelper::metaKeywords()
-     *
+     * 
      * @return
      */
-    public function metaKeywords()
+    public function pageKeywords()
     {
-        return Configure::read('Rita.Site.description');
+        $defKeywords = func_get_args();
+        
+        $keywords =  $this->_View->get('keywords');
+        
+        if(empty($keywords)){
+            $keywords = [];
+        }
+        
+        if (is_string($keywords)) {
+            $keywords = explode(',',$keywords);
+        }
+        
+        $keywords = array_merge($keywords,$defKeywords);
+        $keywords = implode(', ', $keywords);
+        return $this->Html->meta('keywords', $keywords);    
+        
     }
 
 
