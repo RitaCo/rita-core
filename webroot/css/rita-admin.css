@@ -679,7 +679,13 @@ p{
           flex: 1;
   background-clip: content-box;
   color: #222;
-  padding: 1rem 1rem ;
+  padding: 0 1rem 1rem 1rem;
+}
+.com-layout-columns > .layout-cell:first-child {
+  padding-right: 0px;
+}
+.com-layout-columns > .layout-cell:last-child {
+  padding-left: 0px;
 }
 .com-layout-columns.col1 > .layout-cell {
   -webkit-flex: 0 0 100%;
@@ -875,12 +881,17 @@ p{
   font-weight: 300;
   font-size: 17px;
   color: #2D339C;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-shadow: 0 0 3px #c5c5c5;
   z-index: 5;
   padding: 5px 15px;
   box-shadow: 2px 2px 2px 0px #C9C9C9;
   border-radius: 6px;
-  white-space: initial;
+  white-space: nowrap;
+  word-wrap: normal;
   position: absolute;
   display: none;
 }
@@ -907,6 +918,10 @@ label {
   min-width: 130px;
   white-space: nowrap;
   word-wrap: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 input,
 textarea,
@@ -981,6 +996,11 @@ select:focus {
 }
 .com-input > .input-container input[type='file'] {
   width: 50%;
+}
+.com-input > .input-container input[type='hidden'] {
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 .com-input > .input-container select > option {
   /**

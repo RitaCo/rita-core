@@ -18,9 +18,19 @@ var RitaForm = $('form.com-form');
 
 var errors = $('.error-message', RitaForm).each(function(){
    var prv = $(this).prev();
-   var pos = prv.offset(); 
-   var parent = $(this).parent();
-   $(this).css({left: pos.left-$(this).width()+20+"px" , top: prv.outerHeight(true)+15+"px" }).slideDown(); 
+   var parent = $(this).parents('.input-container');
+   var pos = parent.offset(); 
+
+      console.log(pos);
+   var dir = $(this).css('direction');
+   var right = (dir  == 'ltr') ?  20+"px" : 'initial';
+   var left = (dir  == 'rtl') ?  20+"px"  : 'initial';
+   
+   $(this).css({
+        "left" : left,
+        "right" : right, 
+        "top":prv.outerHeight(true)+15+"px" 
+   }).slideDown();    
 });
 		     
 
