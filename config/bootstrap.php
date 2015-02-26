@@ -1,5 +1,7 @@
 <?php
-use Cake\Cache\Cache;
+class_alias("\Rita\Core\Cache\Cache",'Cache', true);
+
+
 use \Cake\Routing\Router;
 /**
  *  cache config

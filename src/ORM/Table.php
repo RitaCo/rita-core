@@ -36,7 +36,7 @@ class Table extends CakeTable
 			$this->addBehavior('Timestamp');
 		}
         $this->addBehavior('Rita/Tools.Persian');
-        \Cake\Log\Log::debug('Ritatable');                
+          
     }
     
 	/**
