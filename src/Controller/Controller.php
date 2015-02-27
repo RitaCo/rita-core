@@ -55,8 +55,9 @@ class Controller extends CakeController
      */
     public function initialize()
     {
-        $this->loadComponent('Rita/Tools.Flash');
-        $this->loadComponent('Rita/Users.User');
+        $this->loadComponent('RequestHandler');
+          $this->loadComponent('Rita/Tools.Flash');
+        $this->loadComponent('Cookie');
         $this->loadComponent('Auth', [
             'authorize' => ['Controller'],
              'authenticate' => [
@@ -88,7 +89,7 @@ class Controller extends CakeController
             $this->layout = 'client';
         }
         
-
+        $this->loadComponent('Rita/Users.CheckList');
     }
     
     
