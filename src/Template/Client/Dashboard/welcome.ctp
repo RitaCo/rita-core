@@ -1,7 +1,15 @@
-<div class="ui-panel">
+<?php
+
+$this->assign('title', 'دفترکار > داشبورد')
+
+?>
+
+<div class="ui-panel-border ">
     <div class="panel-body">
-        <div class="well">
-        به دافتر کار خود خوش آمدید.
+        <div class="body-container">
+            <div class="well">
+                به رسانه شپهر خوش آمدید.
+            </div>
         </div>
     </div>
 

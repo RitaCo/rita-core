@@ -18,7 +18,6 @@ use Cake\Event\Event;
 use Cake\Controller\Controller as CakeController;
 use Cake\Event\EventListenerInterface;
 use Cake\Event\EventManagerTrait;
-
 /**
  * Application Controller
  *
@@ -58,14 +57,15 @@ class Controller extends CakeController
         $this->loadComponent('RequestHandler');
           $this->loadComponent('Rita/Tools.Flash');
         $this->loadComponent('Cookie');
+        $this->loadComponent('Rita/Users.CheckList');
         $this->loadComponent('Auth', [
             'authorize' => ['Controller'],
              'authenticate' => [
                 'Form' => [
                     'fields' => ['username' => 'email', 'password' => 'password'],
                     'contain' => ['Profiles'],
-                    'userModel' => 'Rita/Users.Users'
-                    
+                    'userModel' => 'Rita/Users.Users',
+                      
                 ]
             ],
              'loginAction' => [
@@ -89,7 +89,7 @@ class Controller extends CakeController
             $this->layout = 'client';
         }
         
-        $this->loadComponent('Rita/Users.CheckList');
+      \Rita::$user = $this->Auth->user();  
     }
     
     
@@ -109,19 +109,23 @@ class Controller extends CakeController
        */
       public function isAuthorized($user = null)
       {
-        $isAdmin = ($user['role_id'] === 1) ?  true : false;
+           
+        
         // Any registered user can access public functions
         $prefix = $this->request->param('prefix');
+        
+        
+
+    
 
         // Only admins can access admin functions
-        if ( $prefix === 'admin' and $isAdmin) {
-            return true;
+        if ( $prefix === 'admin') {
+            return $this->_adminIsAuthorized($user);
+        } elseif ($prefix === 'client')
+        {
+            return $this->_clientIsAuthorized($user);
         }
-        if ($prefix === 'client' and $isAdmin) {
-            //$this->Flash->error('ادمین نمی‌تواند به سطح اعضا دسترسی پیدا کند.');
-            //return $this->redirect('/admin/');
-            
-        }
+        
 
         if (in_array($user['role_id'], [1,3]) and $prefix === 'client') {
             return true;
@@ -129,4 +133,30 @@ class Controller extends CakeController
         // Default deny
         return false;
       }
+      
+      
+      
+      private function _adminIsAuthorized($user)
+      {
+        $isAdmin = ($user['role_id'] === 1) ?  true : false;
+        
+        if( $isAdmin){
+            return true;
+        }
+      }
+      
+      
+      private function _clientIsAuthorized($user)
+      {
+        $isClient = ($user['role_id'] === 3) ?  true : false;
+        
+        if(!$isClient) {
+           // $this->Flash->error('ادمین نمی‌تواند به سطح اعضا دسترسی پیدا کند.');
+            //return $this->redirect('/admin/');
+            
+        }   
+            
+        return true;
+      }
+
 }

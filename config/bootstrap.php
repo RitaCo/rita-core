@@ -1,5 +1,6 @@
 <?php
 class_alias("\Rita\Core\Cache\Cache",'Cache', true);
+class_alias("\Rita\Core\Utility\Rita",'Rita', true);
 
 
 use \Cake\Routing\Router;

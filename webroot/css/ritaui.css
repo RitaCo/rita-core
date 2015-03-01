@@ -671,7 +671,7 @@
 .ui-tab > .tab-nav {
   list-style: none;
   position: relative;
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   padding: 10px;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
@@ -692,7 +692,7 @@
   z-index: 1;
   margin-left: 0px;
   cursor: default;
-  background: transparent;
+  background-color: transparent;
   border-top: 1px solid transparent;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -746,9 +746,9 @@
   background-clip: content-box;
   position: relative;
   background-color: #ffffff;
-  -webkit-flex: 1 1 0;
-      -ms-flex: 1 1 0;
-          flex: 1 1 0;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -809,9 +809,9 @@
   -webkit-order: 1;
       -ms-flex-order: 1;
           order: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
 }
 .ui-tab.typ-top .tab-body.active {
   display: -webkit-flex;
@@ -820,9 +820,9 @@
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
 }
 .ui-tab.typ-bottom {
   -webkit-flex-direction: column ;
@@ -902,8 +902,9 @@
 .ui-tab.typ-right li a {
   border-radius: 0px 6px 6px 0;
   border-left: none;
-  padding: 15px 10px;
+  padding: 10px 10px;
   line-height: 1.5;
+  text-align: left;
 }
 .ui-tab.typ-right li:not(.active):hover > a {
   border-left: none;
