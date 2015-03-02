@@ -13,7 +13,9 @@ use \ArrayObject;
 
 class Table extends CakeTable
 {
-  use LogTrait;    
+
+
+    use LogTrait;    
     
     /**
      * Table::__construct()
@@ -27,6 +29,8 @@ class Table extends CakeTable
         $this->ritaInitialize($config);
     }
 
+
+
 	/**
 	 * Table::ritaInitialize()
 	 * 
@@ -35,12 +39,10 @@ class Table extends CakeTable
 	 */
 	private function ritaInitialize(array $config)
     {
-        
         if ($this->hasField('created') || $this->hasField('modified')) {
 			$this->addBehavior('Timestamp');
 		}
         $this->addBehavior('Rita/Tools.Persian');
-          
     }
     
 	/**
@@ -49,7 +51,8 @@ class Table extends CakeTable
 	 *
 	 * @return int|bool next auto increment value or False on failure
 	 */
-	public function getNextAutoIncrement() {
+	public function getNextAutoIncrement() 
+    {
 		$query = "SHOW TABLE STATUS WHERE name = '" . $this->table() . "'";
 		$statement = $this->_connection->execute($query);
 		$result = $statement->fetch();
@@ -58,13 +61,16 @@ class Table extends CakeTable
 		}
 		return (int)$result[10];
 	}    
+
+
     
 	/**
 	 * truncate()
 	 *
 	 * @return void
 	 */
-	public function truncate() {
+	public function truncate() 
+    {
 		$sql = $this->schema()->truncateSql($this->_connection);
 		foreach ($sql as $snippet) {
 			$this->_connection->execute($snippet);
@@ -84,20 +90,28 @@ class Table extends CakeTable
     {
         return $this->exists(['id' => $entityId, 'user_id' => $userId]);
     }
+
     
+    /**
+     * Table::beforeFind()
+     * 
+     * @param mixed $event
+     * @param mixed $query
+     * @param mixed $options
+     * @param mixed $primary
+     * @return
+     */
     public function	beforeFind(Event $event, Query $query, ArrayObject $options, $primary) 
     {
         if ($primary === false) {
             return $query;
         }
         
-        
-        if ($this->hasField('user_id') ){
-            $query->where(['user_id' => \Rita::$user['id']]);
-            \Cake\Log\Log::debug([(int)$primary, $options]);    
+        if ($this->hasField('user_id')) {
+            $query->where(['user_id' => \Rita::$user['id']]);    
         }    
         
-        
         return $query;
-    }    
+    }
+        
 }
