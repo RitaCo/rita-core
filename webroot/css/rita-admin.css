@@ -1123,7 +1123,7 @@ select:focus {
   /**
              * fire fox hang if padding:5px 5px; 
              */
-  margin: 2px 5px;
+  padding: 2px 5px;
   font-size: 14px;
   color: #343434;
 }
@@ -2067,9 +2067,9 @@ body {
   -webkit-flex-direction: row  !important;
       -ms-flex-direction: row  !important;
           flex-direction: row  !important;
-  -webkit-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2087,7 +2087,7 @@ body {
       -ms-flex-direction: column  !important;
           flex-direction: column  !important;
   margin: 0 10px ;
-  background-color: #587285;
+  background-color: #CF4647;
   padding: 10px 20px;
   box-shadow: 1px 1px 1px #000;
   border-radius: 8px;
@@ -2107,5 +2107,5 @@ body {
   text-shadow: 1px 1px 1px #343434;
 }
 #ActionInDashBoard a:hover {
-  background-color: #2F4052;
+  background-color: #E36159;
 }
