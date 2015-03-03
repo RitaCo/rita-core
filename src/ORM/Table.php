@@ -107,7 +107,7 @@ class Table extends CakeTable
             return $query;
         }
         
-        if ($this->hasField('user_id')) {
+        if ($this->hasField('user_id') && \Rita::$user['role_id'] !== 1) {
             $query->where(['user_id' => \Rita::$user['id']]);    
         }    
         

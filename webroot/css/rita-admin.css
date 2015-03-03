@@ -549,9 +549,19 @@ p{
           flex: 0 0 auto !important;
 }
 .box-fluid {
-  -webkit-flex: 1 0 auto !important;
-      -ms-flex: 1 0 auto !important;
-          flex: 1 0 auto !important;
+  -webkit-flex: 1 1 0% !important;
+      -ms-flex: 1 1 0% !important;
+          flex: 1 1 0% !important;
+}
+.flex-col {
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
+}
+.flex-row {
+  -webkit-flex-direction: column  !important;
+      -ms-flex-direction: column  !important;
+          flex-direction: column  !important;
 }
 .bc-visible {
   overflow: visible !important;
@@ -617,11 +627,17 @@ p{
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
+  -webkit-flex-direction: column  !important;
+      -ms-flex-direction: column  !important;
+          flex-direction: column  !important;
 }
 .com-layout.typ-col {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
 }
 .com-layout.typ-col > .layout-splitter {
   border-color: #bbb;
@@ -633,9 +649,9 @@ p{
   width: 8px;
   margin-top: -1px;
   margin-bottom: -2px;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -webkit-flex: 0 1 0%;
+      -ms-flex: 0 1 0%;
+          flex: 0 1 0%;
 }
 .typ-col.opt-childs-fluid-fix > *,
 .typ-row.opt-childs-fluid-fix > * {
@@ -672,20 +688,21 @@ p{
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  overflow: hidden;
 }
 .com-layout-columns > .layout-cell {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
   background-clip: content-box;
   color: #222;
-  padding: 0 1rem 1rem 1rem;
-}
-.com-layout-columns > .layout-cell:first-child {
-  padding-right: 0px;
-}
-.com-layout-columns > .layout-cell:last-child {
-  padding-left: 0px;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+  padding: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .com-layout-columns.col1 > .layout-cell {
   -webkit-flex: 0 0 100%;
@@ -814,6 +831,97 @@ p{
 .com-gridTable > .com-gridTable .grid-col:first-child {
   border-right: none;
 }
+/**
+ * grid flex
+ */
+.com-grid-flex {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+}
+.com-grid-flex > * {
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  background-clip: content-box;
+  color: #222;
+  padding: 0 1rem 1rem 1rem;
+}
+.com-grid-flex > .layout-cell:first-child {
+  padding-right: 0px;
+}
+.com-grid-flex > .layout-cell:last-child {
+  padding-left: 0px;
+}
+.com-grid-flex .grid1 {
+  -webkit-flex: 1 1  8.33%;
+      -ms-flex: 1 1  8.33%;
+          flex: 1 1  8.33%;
+}
+.com-grid-flex .grid2 {
+  -webkit-flex: 1 1  16.6%;
+      -ms-flex: 1 1  16.6%;
+          flex: 1 1  16.6%;
+}
+.com-grid-flex .grid3 {
+  -webkit-flex: 1 1  25%;
+      -ms-flex: 1 1  25%;
+          flex: 1 1  25%;
+}
+.com-grid-flex .grid4 {
+  -webkit-flex: 1 1  33.33%;
+      -ms-flex: 1 1  33.33%;
+          flex: 1 1  33.33%;
+}
+.com-grid-flex .grid5 {
+  -webkit-flex: 1 1  41.66%;
+      -ms-flex: 1 1  41.66%;
+          flex: 1 1  41.66%;
+}
+.com-grid-flex .grid6 {
+  -webkit-flex: 1 1  50%;
+      -ms-flex: 1 1  50%;
+          flex: 1 1  50%;
+}
+.com-grid-flex .grid7 {
+  -webkit-flex: 1 1  58.33%;
+      -ms-flex: 1 1  58.33%;
+          flex: 1 1  58.33%;
+}
+.com-grid-flex .grid8 {
+  -webkit-flex: 1 1  66.66%;
+      -ms-flex: 1 1  66.66%;
+          flex: 1 1  66.66%;
+}
+.com-grid-flex .grid9 {
+  -webkit-flex: 1 1  75%;
+      -ms-flex: 1 1  75%;
+          flex: 1 1  75%;
+}
+.com-grid-flex .grid10 {
+  -webkit-flex: 1 1  83.33%;
+      -ms-flex: 1 1  83.33%;
+          flex: 1 1  83.33%;
+}
+.com-grid-flex .grid11 {
+  -webkit-flex: 1 1  91.66%;
+      -ms-flex: 1 1  91.66%;
+          flex: 1 1  91.66%;
+}
+.com-grid-flex .grid12 {
+  -webkit-flex: 1 1  100%;
+      -ms-flex: 1 1  100%;
+          flex: 1 1  100%;
+}
 .com-form {
   padding: 0px;
   position: relative;
@@ -829,6 +937,9 @@ p{
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -953,9 +1064,12 @@ select:focus {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
   padding: 10px;
   border-right: 10px solid transparent;
   border-bottom: none	;
@@ -964,15 +1078,18 @@ select:focus {
   position: relative;
 }
 .com-input > .input-container .dateSelect {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
 }
 .com-input > .input-container .dateSelect select {
   border: 1px solid #bbb;
@@ -1019,6 +1136,9 @@ select:focus {
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
+  -webkit-flex-direction: column  !important;
+      -ms-flex-direction: column  !important;
+          flex-direction: column  !important;
   padding-right: 0px;
 }
 .form-v .com-input.error .input-container,
@@ -1111,6 +1231,9 @@ div.submit {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
   padding: 0px 20px;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -1466,6 +1589,9 @@ button.btn:disabled {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
   overflow: hidden;
 }
 /* line 354, ../scss/partials/_buttons.scss */
@@ -1659,6 +1785,9 @@ body {
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
+  -webkit-flex-direction: column  !important;
+      -ms-flex-direction: column  !important;
+          flex-direction: column  !important;
 }
 .admin-header-wrapper {
   height: 60px;
@@ -1694,6 +1823,9 @@ body {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
 }
 #admin-header {
   background-color: #fff;
@@ -1709,6 +1841,9 @@ body {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
 }
 #admin-header .options {
   display: -webkit-flex;
@@ -1717,6 +1852,9 @@ body {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1741,6 +1879,9 @@ body {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1786,17 +1927,23 @@ body {
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
+  -webkit-flex-direction: column  !important;
+      -ms-flex-direction: column  !important;
+          flex-direction: column  !important;
 }
 #content {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
+  -webkit-flex-direction: column  !important;
+      -ms-flex-direction: column  !important;
+          flex-direction: column  !important;
 }
 #content .content-header {
   display: -webkit-flex;
@@ -1805,13 +1952,16 @@ body {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
   background-color: #DFDFDF;
   border-bottom: 1px solid #d0d0d0;
 }
 #content .content-header .info {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
   padding: 25px 70px 25px 0px;
 }
 #content .content-header .info .action-title {
@@ -1845,6 +1995,9 @@ body {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
 }
 #content .content-header .actions a {
   box-shadow: inset 1px 0px 0px rgba(255, 255, 255, 0.15), inset 0px 1px 0px rgba(255, 255, 255, 0.15), inset -1px 0px 0px rgba(255, 255, 255, 0.15), inset 0px -1px 0px rgba(255, 255, 255, 0.15);
@@ -1892,6 +2045,9 @@ body {
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
+  -webkit-flex-direction: column  !important;
+      -ms-flex-direction: column  !important;
+          flex-direction: column  !important;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -1908,6 +2064,9 @@ body {
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
+  -webkit-flex-direction: row  !important;
+      -ms-flex-direction: row  !important;
+          flex-direction: row  !important;
   -webkit-flex: 0;
       -ms-flex: 0;
           flex: 0;
@@ -1924,6 +2083,9 @@ body {
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
+  -webkit-flex-direction: column  !important;
+      -ms-flex-direction: column  !important;
+          flex-direction: column  !important;
   margin: 0 10px ;
   background-color: #587285;
   padding: 10px 20px;
