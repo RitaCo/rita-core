@@ -77,8 +77,8 @@ $cakeDescription = 'ریتا : ';
 					
 					<section class="content-flash"><?= $this->Flash->render() ?></section>
 					
-					<section class="content-body">
-        <?= $this->fetch('content') ?>
+					<section id="<?= $this->getLayoutID(); ?>" class="content-body">
+                        <?= $this->fetch('content') ?>
 					</section>
 				</div>
 
