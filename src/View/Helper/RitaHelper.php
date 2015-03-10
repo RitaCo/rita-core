@@ -64,7 +64,7 @@ class RitaHelper extends Helper
         $css = Hash::extract($all, '{n}.js.base.{n}');
         $css = array_merge($css, Hash::extract($all, "{n}.js.{$scope}.{n}"));
   
-        return $this->Html->script($css);
+        return $this->Html->script($css,['crossorigin'=> 'anonymous']);
     }
 
 
@@ -87,7 +87,7 @@ class RitaHelper extends Helper
         $css = Hash::extract($all, '{n}.css.base.{n}');
         $css = array_merge($css, Hash::extract($all, "{n}.css.{$scope}.{n}"));
 
-        return $this->Html->css($css);
+        return $this->Html->css($css,['crossorigin'=> 'anonymous']);
     }
 
 

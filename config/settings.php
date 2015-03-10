@@ -20,6 +20,7 @@ return [
             'Rita/Core.jquery-2.1.3.min',
             'Rita/Core.RitaUI.js',
             'Rita/Core.Admin.js',
+            'Rita/Core.intercooler-0.4.8.js'
            // 'Rita.jquery.sticky.js'
         ]
     ]

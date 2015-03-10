@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-$('.admin-navigator-container').width($('.admin-sidebar-wrapper').width()) ;
+var w = $('.admin-sidebar-wrapper').width();
+$('.admin-navigator-container').width(w) ;
 
 //	menu();
 });
