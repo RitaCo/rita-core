@@ -8,7 +8,7 @@ return [
             'Rita/Core.ritaui.css'
         ],
         'front' => [
-            
+            'Rita/Core.debug.css'
         ],
         'admin' => [
             'Rita/Core.rita-admin.css',

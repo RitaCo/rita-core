@@ -14,10 +14,12 @@
  */
 namespace Rita\Core\Controller;
 
-use Cake\Event\Event;
 use Cake\Controller\Controller as CakeController;
+use Cake\Core\Plugin;
+use Cake\Event\Event;
 use Cake\Event\EventListenerInterface;
 use Cake\Event\EventManagerTrait;
+
 /**
  * Application Controller
  *
@@ -55,30 +57,15 @@ class Controller extends CakeController
     public function initialize()
     {
         $this->loadComponent('RequestHandler');
-          $this->loadComponent('Rita/Tools.Flash');
+        
+        $this->loadComponent('Rita/Tools.Flash');
+        
         $this->loadComponent('Cookie');
-        $this->loadComponent('Rita/Users.CheckList');
-        $this->loadComponent('Auth', [
-            'authorize' => ['Controller'],
-             'authenticate' => [
-                'Form' => [
-                    'fields' => ['username' => 'email', 'password' => 'password'],
-                    'contain' => ['Profiles'],
-                    'userModel' => 'Rita/Users.Users',
-                      
-                ]
-            ],
-             'loginAction' => [
-                'prefix'=> false,
-                'controller' => 'Users',
-                'action' => 'login',
-                'plugin' => 'Rita/Users'
-            ],
-            'authError' => 'دسترسی برای شما مقدور نمی‌باشد',
-            'loginRedirect' => '/client',
-            'logoutRedirect' => '/'
-        ]);
-
+        
+        if( Plugin::loaded('Rita/Users')) {
+            $this->loadComponent('Rita/Users.User');    
+        }
+        
         if ($this->request->param('prefix') == 'admin') {
             $this->theme = 'Rita/Core';
             $this->layout = 'admin';
@@ -88,75 +75,24 @@ class Controller extends CakeController
             $this->theme = 'Rita/Core';
             $this->layout = 'client';
         }
-        
-      \Rita::$user = $this->Auth->user();  
+
     }
     
     
+ 
     /**
-     * AppController::beforeFilter()
-     *
-     * @param mixed $event
-     * @return void
-     */
-
-    
-      /**
-       * AppController::isAuthorized()
-       *
-       * @param mixed $user
-       * @return
-       */
-      public function isAuthorized($user = null)
-      {
-           
-        
-        // Any registered user can access public functions
-        $prefix = $this->request->param('prefix');
-        
-        
-
-    
-
-        // Only admins can access admin functions
-        if ( $prefix === 'admin') {
-            return $this->_adminIsAuthorized($user);
-        } elseif ($prefix === 'client')
-        {
-            return $this->_clientIsAuthorized($user);
-        }
-        
-
-        if (in_array($user['role_id'], [1,3]) and $prefix === 'client') {
-            return true;
-        }
-        // Default deny
-        return false;
-      }
+    * AppController::isAuthorized()
+    *
+    * @param mixed $user
+    * @return
+    */
+    public function isAuthorized($user = null)
+    {
+        return $this->User->isAuthorized($user);     
+    }
       
       
       
-      private function _adminIsAuthorized($user)
-      {
-        $isAdmin = ($user['role_id'] === 1) ?  true : false;
-        
-        if( $isAdmin){
-            return true;
-        }
-      }
       
-      
-      private function _clientIsAuthorized($user)
-      {
-        $isClient = ($user['role_id'] === 3) ?  true : false;
-        
-        if(!$isClient) {
-           // $this->Flash->error('ادمین نمی‌تواند به سطح اعضا دسترسی پیدا کند.');
-            //return $this->redirect('/admin/');
-            
-        }   
-            
-        return true;
-      }
 
 }

@@ -1334,9 +1334,9 @@
   height: 8px;
   margin-left: -1px;
   margin-right: -1px;
-  -webkit-flex: 0 1 0%;
-      -ms-flex: 0 1 0%;
-          flex: 0 1 0%;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 .body-header + .body-splitter {
   -webkit-order: 2;
