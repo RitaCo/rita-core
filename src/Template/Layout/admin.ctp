@@ -28,14 +28,14 @@
 				</div>
 				<div class="options" >
   		            <div class="freebox"></div>
-					<?= $this->element('Rita/Users.box-login-info'); ?>
+					<?= (!\Cake\Core\Plugin::loaded('Rita/Users')) ?: $this->element('Rita/Users.box-login-info'); ?>
 				</div>
 			</div>
 		</header>
 		
 		
 		<section class="admin-body-wrapper">
-            <?= $this->element('Rita/Core.Admin/Navigator/main-left'); ?>	
+            <?= $this->element('Admin/Navigator/main-left'); ?>	
 			
 			<div class="admin-content-wrapper">
 			
