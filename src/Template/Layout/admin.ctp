@@ -35,7 +35,7 @@
 		
 		
 		<section class="admin-body-wrapper">
-            <?= $this->element('Admin/Navigator/main-left'); ?>	
+            <?= $this->element('Navigator/main-left'); ?>	
 			
 			<div class="admin-content-wrapper">
 			

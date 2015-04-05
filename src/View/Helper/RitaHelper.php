@@ -29,9 +29,14 @@ class RitaHelper extends Helper
     {
         
         if (($settings = Cache::read('assets', 'rita')) === false) {
-            $settings = [];
+            $settings = $files = [];
+            $files[] = CONFIG . 'assets.php';
+
             foreach (Plugin::loaded() as $plugin) {
-                $file = Plugin::path($plugin).'config'.DS.'assets.php';
+                $files[] = Plugin::path($plugin) . 'config' . DS . 'assets.php';
+            }
+
+            foreach ($files as $file) {
                 if (!file_exists($file)) {
                     continue;
                 }
@@ -40,8 +45,10 @@ class RitaHelper extends Helper
                     $settings[] = $temp;
                 }
             }
+            
             Cache::write('assets', $settings, 'rita');
         }
+        
         return $settings;
     }
 
