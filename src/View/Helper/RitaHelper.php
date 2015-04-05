@@ -28,11 +28,11 @@ class RitaHelper extends Helper
     protected function fetchSetting()
     {
         
-        if (($settings = Cache::read('settings', 'rita')) === false) {
+        if (($settings = Cache::read('assets', 'rita')) === false) {
             $settings = [];
             foreach (Plugin::loaded() as $plugin) {
-                $file = Plugin::path($plugin).'config'.DS.'settings.php';
-                if (!file_exists(Plugin::path($plugin).'config'.DS.'settings.php')) {
+                $file = Plugin::path($plugin).'config'.DS.'assets.php';
+                if (!file_exists($file)) {
                     continue;
                 }
                 $temp = require ($file);
@@ -40,7 +40,7 @@ class RitaHelper extends Helper
                     $settings[] = $temp;
                 }
             }
-            Cache::write('settings', $settings, 'rita');
+            Cache::write('assets', $settings, 'rita');
         }
         return $settings;
     }
