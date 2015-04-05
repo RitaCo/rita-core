@@ -28,7 +28,7 @@ use Cake\Event\EventManagerTrait;
  *
  * @link http://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
-class Controller extends CakeController
+class RitaController extends CakeController
 {
 
     
@@ -56,6 +56,7 @@ class Controller extends CakeController
      */
     public function initialize()
     {
+         parent::initialize();
         $this->loadComponent('RequestHandler');
         
         $this->loadComponent('Rita/Tools.Flash');
