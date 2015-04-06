@@ -67,14 +67,14 @@ class RitaController extends CakeController
             $this->loadComponent('Rita/Users.User');    
         }
         
-        if ($this->request->param('prefix') == 'admin') {
-            $this->theme = 'Rita/Core';
-            $this->layout = 'admin';
-        }
+        
+        
+        
+         //$this->layout = $this->request->param('prefix');
+        
 
-        if ($this->request->param('prefix') == 'client') {
+        if (in_array($this->request->param('prefix'), ['admin', 'client'])) {
             $this->theme = 'Rita/Core';
-            $this->layout = 'client';
         }
 
     }
