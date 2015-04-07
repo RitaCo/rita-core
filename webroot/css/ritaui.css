@@ -1226,9 +1226,9 @@
   -webkit-flex: 1 1 0%;
       -ms-flex: 1 1 0%;
           flex: 1 1 0%;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2;
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3;
 }
 .body-container p {
   margin: 5px 0px;
@@ -1242,9 +1242,9 @@
 .body-footer {
   background: #efefef;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
-  -webkit-order: 3;
-      -ms-flex-order: 3;
-          order: 3;
+  -webkit-order: 5;
+      -ms-flex-order: 5;
+          order: 5;
   position: relative;
   padding: 10px 20px;
   -webkit-flex: 0 0 auto;
@@ -1342,6 +1342,12 @@
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
+}
+.body-container + .body-splitter {
+  -webkit-order: 4;
+      -ms-flex-order: 4;
+          order: 4;
+  border-bottom: none;
 }
 .c-splitter-row {
   height: 6px;

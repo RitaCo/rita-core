@@ -13,8 +13,6 @@ use \ArrayObject;
 
 class Table extends CakeTable
 {
-
-
     use LogTrait;    
     
     /**
