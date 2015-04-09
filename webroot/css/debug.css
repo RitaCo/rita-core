@@ -5,6 +5,7 @@
 p.error,
 p.notice {
   display: block;
+  position: relative;
   clear: both;
   background-repeat: repeat-x;
   position: fixed;
@@ -20,6 +21,7 @@ p.notice {
 p.notice {
   color: #000000;
   background: #ffcc00;
+  position: relative;
 }
 
 .cake-error,

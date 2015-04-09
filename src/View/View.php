@@ -73,6 +73,6 @@ class View extends CakeView
     public function getLayoutID(){
         $out = $this->_getRequestNameID();
         
-        return '#' . $out['controller'] . $out['action'];
+        return 'Page-' . $out['controller'] . $out['action'];
     }
 }
