@@ -39,7 +39,7 @@ $menus = $afterEvent->result;
                             <ul class="menu-submenu">
                             
                                 <?php 
-                                 foreach($menus['addon'] as $menu){
+                                 foreach($menus['addons'] as $menu){
                                     echo $this->element($menu);
                                  }
                                 ?>
