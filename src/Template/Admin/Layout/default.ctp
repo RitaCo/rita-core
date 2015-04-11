@@ -10,10 +10,7 @@
     <?= $this->Rita->loadingCSS() ?>
     <?= $this->Rita->loadingJS() ?>
         
-
-	
-		
-    <?= $this->fetch('meta') ?>
+   <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
@@ -35,7 +32,7 @@
 		
 		
 		<section class="admin-body-wrapper">
-            <?= $this->element('Navigator/main-left'); ?>	
+            <?= $this->element('Rita/Core.Navigator/main-left'); ?>	
 			
 			<div class="admin-content-wrapper">
 			

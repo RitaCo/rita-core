@@ -178,12 +178,16 @@ class RitaHelper extends Helper
     {
         $title = [];
         
+        $titlePage = $this->_View->fetch('title');
+        
+        if($titlePage  !== '-') {
+            $title[] =  $titlePage .' - ';     
+        }
+         
         if(!empty($siteTitle)) {
             $title[] = $siteTitle;
-            $title[] = ' | ';
+            
         } 
-        
-        $title[] = $this->_View->fetch('title');
         
         $title = implode('',$title);
         
