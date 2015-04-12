@@ -914,6 +914,16 @@ p{
       -ms-flex-direction: column  !important;
           flex-direction: column  !important;
 }
+.flex-wrap {
+  -webkit-flex-wrap: wrap !important;
+      -ms-flex-wrap: wrap !important;
+          flex-wrap: wrap !important;
+}
+.flex-nowrap {
+  -webkit-flex-wrap: nowrap !important;
+      -ms-flex-wrap: nowrap !important;
+          flex-wrap: nowrap !important;
+}
 .bc-visible {
   overflow: visible !important;
 }
@@ -1294,6 +1304,9 @@ p{
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-flex-wrap: wrap !important;
+      -ms-flex-wrap: wrap !important;
+          flex-wrap: wrap !important;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
@@ -1946,6 +1959,9 @@ button.btn:disabled {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-flex-wrap: wrap !important;
+      -ms-flex-wrap: wrap !important;
+          flex-wrap: wrap !important;
   overflow: hidden;
 }
 /* line 354, ../scss/partials/_buttons.scss */

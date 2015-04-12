@@ -101,12 +101,14 @@
   margin: 0px;
   margin-left: 10px;
   color: #666;
-  font-size: 15px;
+  font-size: 1.3em;
+  transition: all 0.2s ease-in-out;
 }
 .toolbar-band > .btn span {
-  font-size: 14px;
+  font-size: 1.2em;
   font-family: wamer;
   font-weight: 400;
+  transition: all 0.2s ease-in-out;
 }
 .toolbar-band > .btn.disabled {
   color: silver;
@@ -118,8 +120,16 @@
 .toolbar-band > .btn:not(.disabled):hover {
   border: 1px solid silver;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
-  background: none;
+  background: rgba(0, 0, 0, 0.05);
   color: #222;
+  transition: all 0.2s ease-in-out;
+}
+.toolbar-band > .btn:not(.disabled):hover span {
+  color: #404056;
+  transition: all 0.2s ease-in-out;
+}
+.toolbar-band > .btn:not(.disabled):hover i {
+  color: #aa1212;
   transition: all 0.2s ease-in-out;
 }
 .toolbar-band.band--sm > .btn i {
@@ -915,7 +925,7 @@
   font-family: WAmer, "Fira";
   font-size: 12px;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
 }
 .ui-dataGrid .table-header th:last-child,
 .ui-dataGrid thead th:last-child,
@@ -957,7 +967,7 @@
 .ui-dataGrid .table-header th a,
 .ui-dataGrid thead th a {
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAJFBMVEUAAAApQghqnB9toCH///9zoyxqnB9zoyxzoyxzoyyY1D6844FRtSItAAAACXRSTlMAAAAAAAED/f4yiQJ2AAAAPklEQVR4XmNwgQPcTAeGySkwJudOuOjs1VOgTM/du3fCmDNnzkQygSATU5sHwjCH6tUTYUx3hMUMU5OIMRcAHfM84bGp8C0AAAAASUVORK5CYII=') no-repeat center right;
-  padding: 0px 20px ;
+  padding-right: 20px ;
 }
 .ui-dataGrid .table-header th a.asc,
 .ui-dataGrid thead th a.asc {
