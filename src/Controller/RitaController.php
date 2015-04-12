@@ -40,7 +40,6 @@ class RitaController extends CakeController
         'Rita/Tools.Flash',
         'Rita/Tools.Paginator',
         'Rita/Core.Rita',
-        'Session',
         'Time',
         'Text'
     ];
