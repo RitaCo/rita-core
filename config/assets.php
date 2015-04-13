@@ -4,6 +4,7 @@ return [
         'base' => [
             'Rita/Core.fonts.css',
             'Rita/Core.icons/icons.css',
+            'Rita/Core.material/materialdesignicons.css',
             'Rita/Core.animate.css',
             'Rita/Core.ritaui.css'
         ],
