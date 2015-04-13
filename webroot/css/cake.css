@@ -1,0 +1,215 @@
+a.disabled {
+  pointer-events: none;
+}
+
+.cake-debug-output{
+	direction: ltr;
+}
+
+
+legend {
+  color:#15848F;
+}
+
+.actions.columns {
+  margin-top:1rem;
+  border-left: 5px solid #15848F;
+  padding-left: 15px;
+  padding: 32px 20px;
+}
+
+.actions.columns h3 {
+  color:#15848F;
+}
+
+.index table {
+  margin-top: 2rem;
+  border: 0;
+}
+
+.index table thead {
+  height: 3.5rem;
+}
+
+
+
+.error label,
+.error label.error {
+  color: #C3232D;
+}
+
+div.message {
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  font-weight: 400;
+  font-family: wyekan,tahoma;
+  font-size: 15px;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.44);
+  position: relative;
+  padding: 0.5rem 1.5rem 0.5rem 20%;
+  transition: opacity 300ms ease-out 0s;
+  background-color: #2BAAB1;
+  border-color: #2BAAB1;
+  color: #fff;
+  margin-bottom: 15px;
+    -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+div.message.error {
+  background-color: #C3232D;
+  border-color: #C3232D;
+  color: #FFF;
+}
+
+
+div.message.info {
+  background-color: #3278B3;
+  border-color: #3278B3;
+  color: #FFF;
+}
+
+div.message:before {
+  line-height: 1;
+  font-size: 20px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  right: -11px;
+  background-color: #FFF;
+  padding: 2px ;
+  font-family: tahoma;
+  content: "✔";
+  color: #2BAAB1;
+}
+
+div.message.error:before {
+  
+  color: #C3232D;
+  content: "✘";
+}
+
+div.message.info:before {
+  
+  color: #3278B3;
+  content: "❗";
+}
+
+.view h2 {
+  color: #6F6F6F;
+}
+
+.view .columns.strings {
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin-right:0.7rem;
+}
+
+.view .numbers {
+  background-color: #B7E3EC;
+  color: #FFF;
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin-right: 0.7rem;
+}
+
+.view .columns.dates {
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin-right:0.7rem;
+  background-color:#DCE47E;
+  color: #fff;
+}
+
+.view .columns.booleans {
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin-right:0.7rem;
+  background-color: #8D6E65;
+  color: #fff;
+}
+
+.view .strings p {
+  border-bottom: 1px solid #eee;
+}
+.view .numbers .subheader, .view .dates .subheader {
+  color:#747474;
+}
+.view .booleans .subheader {
+  color: #E9E9E9
+}
+
+.view .texts .columns {
+  margin-top:1.2rem;
+  border-bottom: 1px solid #eee;
+}
+
+
+/** Notices and Errors **/
+.cake-error,
+.cake-debug,
+.notice,
+p.error,
+p.notice {
+  display: block;
+  width: 90%;
+  background-repeat: repeat-x;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 9999;
+  padding: 7px 14px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.cake-debug,
+.notice,
+p.notice {
+  color: #000000;
+  background: #ffcc00;
+}
+
+.cake-error,
+p.error {
+  color: #fff;
+  background: #C3232D;
+}
+
+pre {
+  background: none repeat scroll 0% 0% #FFF;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin: 15px 0px;
+  color: rgba(0, 0 ,0 , 0.74);
+  padding:5px;
+}
+
+.cake-error .cake-stack-trace {
+  margin-top:10px;
+}
+
+.cake-stack-trace code {
+  background: inherit;
+  border:0;
+}
+
+.cake-code-dump .code-highlight {
+  display: block;
+  background-color: #FFC600;
+}
+
+.cake-error a,
+.cake-error a:hover {
+  color:#fff;
+  text-decoration: underline;
+}
+
+

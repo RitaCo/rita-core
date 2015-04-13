@@ -98,8 +98,6 @@
   transition: all 0.2s ease-in-out;
 }
 .toolbar-band > .btn i {
-  margin: 0px;
-  margin-left: 10px;
   color: #666;
   font-size: 1.3em;
   transition: all 0.2s ease-in-out;
@@ -797,20 +795,22 @@
 }
 .ui-menu .icon i {
   color: #01B070;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 400;
   position: relative;
+}
+.ui-menu > li > a .icon i {
+  font-size: 1.7rem;
 }
 .ui-menu .label {
   -webkit-flex: 1 1 0%;
       -ms-flex: 1 1 0%;
           flex: 1 1 0%;
 }
-.ui-menu .label span {
-  color: #DCE2E6;
+.ui-menu .label {
+  color: #fff;
   font-family: Wirans;
   font-size: 1rem;
-  line-height: 0;
   font-weight: 300;
   text-shadow: 1px 1px 1px #444;
 }
@@ -833,17 +833,11 @@
   background-color: #303a41;
   display: none;
   position: absolute;
-  left: 0;
   top: 0;
   z-index: 100;
-  width: 100%;
   right: 100%;
-}
-.menu-submenu li {
-  padding: 0 5px 5px 5px;
-}
-.menu-submenu li:first-child {
-  padding-top: 5px;
+  padding: 10px;
+  box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .menu-submenu a {
   -webkit-align-items: center;
@@ -855,6 +849,7 @@
   width: 100%;
   background-color: transparent;
   padding: 5px 0  ;
+  white-space: nowrap;
 }
 .menu-submenu a > * {
   -webkit-align-self: center;
@@ -870,12 +865,15 @@
 .menu-submenu .icon i {
   color: #f69a9a;
 }
+.menu-submenu .label {
+  font-family: wiraniansans;
+  font-size: 1.1rem;
+}
 .ui-menu > li:hover > .menu-submenu,
 .menu-submenu li:hover > .menu-submenu {
   display: block;
 }
-.ui-menu li:hover > a:not(:only-child):after,
-.menu-submenu li:hover > a:not(:only-child):after {
+.ui-menu li:hover > a:not(:only-child):after {
   position: absolute;
   width: 0;
   height: 0;
@@ -885,28 +883,38 @@
   content: "";
   left: 0;
   top: calc(40%);
+  z-index: 200;
   transition: all 0.2s ease-in-out;
 }
-.padding-none .ui-dataGrid {
-  border: none;
-  border-top: 1px solid #fff !important;
-  border-bottom: 1px solid #fff !important;
-  margin: 0px 1px;
+.menu-submenu > .menu-submenu:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid #303a41;
+  border-bottom: 10px solid transparent;
+  content: "";
+  left: 0;
+  top: calc("50% - 10px");
+  z-index: 200;
+  transition: all 0.2s ease-in-out;
+}
+.padding-none > .ui-dataGrid {
+  border: 1px solid #fff !important;
 }
 .ui-dataGrid {
   border: 1px solid #9f9f9f;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 .ui-dataGrid > table {
   border-collapse: separate;
-  table-layout: fixed;
-  overflow: hidden;
+  table-layout: auto;
   position: relative;
   border-spacing: 0px 0px;
-  width: auto;
-  min-width: 100%;
+  width: 100%;
 }
 .ui-dataGrid .table-header th,
 .ui-dataGrid > table > thead th,
@@ -1007,6 +1015,13 @@
 .ui-dataGrid tbody tr:focus {
   background-color: rgba(234, 235, 247, 0.68);
   color: #000;
+}
+/**
+ * action
+ */
+.ui-dataGrid .table-body .table-row td.actions,
+.ui-dataGrid tbody tr td.actions {
+  background-color: #E1E1DF;
 }
 /**
  * table footer

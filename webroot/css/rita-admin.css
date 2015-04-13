@@ -113,7 +113,7 @@ body {
   background: #FA113D;
   -moz-user-select: none;
   color: white;
-  width: 170px;
+  width: 80px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -146,9 +146,9 @@ body {
   display: block;
   position: relative;
   z-index: 5;
-  -webkit-flex: 0 0 170px;
-      -ms-flex: 0 0 170px;
-          flex: 0 0 170px;
+  -webkit-flex: 0 0 80px;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
   background-color: #37424a;
 }
 .admin-navigator-container {
@@ -249,8 +249,8 @@ body {
   display: inline-flex;
   vertical-align: middle;
   border: 1px solid #b4b4b4;
-  line-height: 28px;
-  padding: 0px 14px;
+  line-height: 30px;
+  padding: 0px 10px;
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch;
@@ -1662,8 +1662,8 @@ div.submit {
   display: inline-flex;
   vertical-align: middle;
   border: 1px solid #b4b4b4;
-  line-height: 28px;
-  padding: 0px 14px;
+  line-height: 30px;
+  padding: 0px 10px;
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch;
@@ -2131,3 +2131,5 @@ button.btn-tiny {
   background-color: #3c6ab9;
   color: white;
 }
+
+/*# sourceMappingURL=rita-admin.css.map */

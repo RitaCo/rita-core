@@ -6,10 +6,11 @@ return [
             'Rita/Core.icons/icons.css',
             'Rita/Core.material/materialdesignicons.css',
             'Rita/Core.animate.css',
-            'Rita/Core.ritaui.css'
+            'Rita/Core.ritaui.css',
+            'Rita/Core.debug.css'
         ],
         'front' => [
-            'Rita/Core.debug.css'
+            
         ],
         'admin' => [
             'Rita/Core.rita-admin.css',

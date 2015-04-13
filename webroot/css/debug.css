@@ -8,7 +8,7 @@ p.notice {
   position: relative;
   clear: both;
   background-repeat: repeat-x;
-  position: fixed;
+  
   z-index: 9999;
   margin-bottom: 18px;
   padding: 7px 14px;
