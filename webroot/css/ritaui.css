@@ -1287,8 +1287,8 @@
  */
 .body-container.container--layout-splitter {
   position: relative;
-  background-color: #ECECEC;
-  padding: 10px;
+  background-color: #C9C9C9;
+  padding: 8px;
   -webkit-flex-direction: row ;
       -ms-flex-direction: row ;
           flex-direction: row ;
@@ -1301,12 +1301,14 @@
   -webkit-flex-direction: column ;
       -ms-flex-direction: column ;
           flex-direction: column ;
-  -webkit-flex: 1 1 0%;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex: 0 1 0%;
+      -ms-flex: 0 1 0%;
+          flex: 0 1 0%;
 }
 .body-container.container--layout-splitter > .layout-box {
-  padding: 10px;
   border: 1px solid #9f9f9f;
   background-color: #fff;
 }
@@ -1314,7 +1316,7 @@
 .body-container.container--layout-splitter > .layout-box + .layout-box,
 .body-container.container--layout-splitter > .layout-box + .layout-cell,
 .body-container.container--layout-splitter > .layout-cell + .layout-box {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .body-container.container--layout-splitter .layout-box .box-splitter {
   border-bottom: 1px solid #9f9f9f;
@@ -1334,7 +1336,7 @@
 .container--layout-splitter.flex--row > .layout-box + .layout-box,
 .container--layout-splitter.flex--row > .layout-box + .layout-cell,
 .container--layout-splitter.flex--row > .layout-cell + .layout-box {
-  margin-top: 10px;
+  margin-top: 8px;
   margin-right: 0px;
 }
 .ui-panel-border .body-container.container--layout-splitter {

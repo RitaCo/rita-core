@@ -61,7 +61,7 @@
 				</div>
 
 				<div class="admin-footer-wrapper">
-					<span>ویرایش : ۳.۰.۱</span>
+					<span>ویرایش : ۳.۰.۱۰</span>
 				</div>
 	
 			</div>

@@ -1337,9 +1337,9 @@ p{
   border-top: 1px solid #fff;
   border-bottom: 1px solid #ddd;
   position: relative;
-  -webkit-flex: 1 1 0%;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%;
+  -webkit-flex: 0 1 0%;
+      -ms-flex: 0 1 0%;
+          flex: 0 1 0%;
 }
 .com-input.required .input-container > label:after {
   color: #e32;
