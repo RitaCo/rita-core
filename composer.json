@@ -1,7 +1,7 @@
 {
-    "name": "ritaco/core",
+    "name": "ritaco/rita",
     "type": "cakephp-plugin",
-    "description": "This is base of Rita App Templates",
+    "description": "Rita Plugin is Rita App Core & magnements",
     "keywords": ["cakephp",  "Rita"],
     "homepage": "https://github.com/RitaCo/rita-core",
     "license": "MIT",
@@ -19,20 +19,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Rita\\Core\\": "src"
+            "Rita\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rita\\Core\\Test\\": "tests"
+            "Rita\\Test\\": "tests"
         }
     },
     "support":{
         "source": "https://github.com/RitaCo/rita-core",
         "issues": "https://github.com/RitaCo/rita-core/issues"
-    },
-    "extra": {
-        "installer-name": "Rita/Core"
     },
     "minimum-stability": "dev"
 }
