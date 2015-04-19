@@ -1,5 +1,5 @@
 {
-    "name": "ritaco/rita",
+    "name": "ritaco/core",
     "type": "cakephp-plugin",
     "description": "Rita Plugin is Rita App Core & magnements",
     "keywords": ["cakephp",  "Rita"],
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Rita\\": "src"
+            "Rita\\Core\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rita\\Test\\": "tests"
+            "Rita\\Core\\Test\\": "tests"
         }
     },
     "support":{
