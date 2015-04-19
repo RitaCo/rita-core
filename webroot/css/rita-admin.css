@@ -1347,7 +1347,7 @@ p{
   padding: 5px;
 }
 .com-input.error .input-container {
-  border-right: 10px solid #DC0000;
+  border-right: 4px solid #DC0000;
 }
 .com-input .error-message {
   border: 2px solid #e67e22;
@@ -1518,21 +1518,19 @@ select:focus {
 .form-v .com-input input[type='file'],
 .com-input.form-v input[type='file'] {
   width: 100% ;
-  min-width: 200px;
+  min-width: 130px;
 }
 .form-v .com-input .error-message,
 .com-input.form-v .error-message {
   top: auto !important;
-  right: 3% !important;
   display: block;
   position: absolute;
-  left: 30% !important;
 }
 .form-v .com-input input,
 .com-input.form-v input,
 .form-v .com-input textarea,
 .com-input.form-v textarea {
-  min-width: 200px;
+  min-width: 130px;
 }
 .form-v .com-input select,
 .com-input.form-v select {
@@ -1703,7 +1701,6 @@ div.submit {
 /* line 58, ../scss/partials/_buttons.scss */
 input.btn,
 button.btn {
-  height: 34px;
   cursor: pointer;
 }
 /* line 65, ../scss/partials/_buttons.scss */
@@ -2131,5 +2128,3 @@ button.btn-tiny {
   background-color: #3c6ab9;
   color: white;
 }
-
-/*# sourceMappingURL=rita-admin.css.map */

@@ -821,7 +821,7 @@
   padding: 15px 0;
 }
 .ui-menu > li > a .label {
-  padding-top: 10px;
+  padding-top: 4px;
 }
 .ui-menu > li:hover > a {
   background: #3d4a53;
@@ -839,6 +839,11 @@
   padding: 10px;
   box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+.menu-submenu {
+  min-width: 150px;
+  min-height: 88px;
+  border-radius: 2\px;
+}
 .menu-submenu a {
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -848,7 +853,7 @@
           flex-direction: row ;
   width: 100%;
   background-color: transparent;
-  padding: 5px 0  ;
+  padding: 10px 10px  ;
   white-space: nowrap;
 }
 .menu-submenu a > * {
@@ -863,11 +868,13 @@
   padding: 0 5px 0 10px;
 }
 .menu-submenu .icon i {
-  color: #f69a9a;
+  color: #DEAE23;
+  font-size: 1rem;
 }
 .menu-submenu .label {
   font-family: wiraniansans;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  text-shadow: 1px 1px 1px #000;
 }
 .ui-menu > li:hover > .menu-submenu,
 .menu-submenu li:hover > .menu-submenu {
@@ -1276,10 +1283,18 @@
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
-.body-footer > .btn {
+.body-footer > .btn,
+.body-footer button,
+.body-footer input[type="button"],
+.body-footer input[type="reset"],
+.body-footer input[type="submit"] {
   box-shadow: 2px 2px 1px #ccc !important;
 }
-.body-footer > .btn:focus {
+.body-footer > .btn:focus,
+.body-footer button:focus,
+.body-footer input[type="button"]:focus,
+.body-footer input[type="reset"]:focus,
+.body-footer input[type="submit"]:focus {
   box-shadow: inset 2px 2px 1px #ccc !important;
 }
 /**
@@ -1304,13 +1319,13 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-flex: 0 1 0%;
-      -ms-flex: 0 1 0%;
-          flex: 0 1 0%;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 .body-container.container--layout-splitter > .layout-box {
   border: 1px solid #9f9f9f;
-  background-color: #fff;
+  background-color: #F7F7F7;
 }
 .body-container.container--layout-splitter > .layout-cell + .layout-cell,
 .body-container.container--layout-splitter > .layout-box + .layout-box,
