@@ -13,7 +13,7 @@ $menus = $afterEvent->result;
 						<li>
 							<a href="/admin">
 								<div class="icon"><i class=" icon-homealt"></i></div>
-								<div class="label"><span>داشبورد</span></div>
+								<div class="label"><span>پیشخوان</span></div>
 							</a>
 						</li>
 

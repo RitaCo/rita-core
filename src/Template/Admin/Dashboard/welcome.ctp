@@ -1,5 +1,5 @@
 <?php
 use Cake\Core\Configure;
 
- $this->assign('title','مدیریت / داشبورد');
- $this->assign('note','به داشبورد مدیریت ریتا خوش آمدید.');
+ $this->assign('title','مدیریت / پیشخوان');
+ $this->assign('note','برد پیشخوان ریتا خوش آمدید.');
