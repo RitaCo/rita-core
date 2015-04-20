@@ -36,33 +36,7 @@ class View extends CakeView
     }
     
     
-
-
-
-    /**
-     * View::_getRequestNameID()
-     * 
-     * @return
-     */
-    protected function _getRequestNameID(){
-        $out = [];
-        
-          
-        
-        $name = $this->request->param('plugin');
-        if($name){
-            
-            $name = str_replace('/','',$name);
-            $out['plugin'] = $name ; 
-        }
-
-        $name = $this->request->param('controller');
-        $out['controller'] = ucfirst($name) ;
-        $name = $this->request->param('action');
-        $out['action'] = ucfirst($name);
-        return $out;
-    }
-    
+ 
     
     
     /**
@@ -71,8 +45,20 @@ class View extends CakeView
      * @return
      */
     public function getLayoutID(){
-        $out = $this->_getRequestNameID();
+        $out = '';
+        extract($this->request->params);  
         
-        return 'Page-' . $out['controller'] . $out['action'];
+        if ($prefix) {
+            $out  .= ucfirst($prefix).'-' ; 
+        }
+
+        if ($plugin) {
+            $out  .= ucfirst($plugin) ; 
+        }
+
+        $out .= ucfirst($controller);
+        $out .= ucfirst($action);
+        
+        return  $out;
     }
 }
