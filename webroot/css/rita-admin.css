@@ -977,6 +977,14 @@ p{
   z-index: inherit !important;
   position: inherit !important;
 }
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
 .com-layout {
   overflow: hidden;
   display: -webkit-flex;

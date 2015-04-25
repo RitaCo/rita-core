@@ -6,6 +6,7 @@ use Cake\Utility\Hash;
 use Cake\Core\Plugin;
 use Cake\Cache\Cache;
 use Cake\Log\Log;
+use Rita\Core\View\View;
 
 class RitaHelper extends Helper
 {
@@ -15,9 +16,38 @@ class RitaHelper extends Helper
 
     protected $_assets = [];
 
+    protected $pageTitle = [];
+    protected $pageDescription;
+    protected $pageKeyWord;
+    
+    protected $pageCaption = [];
+    protected $pageNote;
+    
+    private $_prefix;
 
 
 
+    /**
+     * RitaHelper::__construct()
+     * 
+     * @param mixed $View
+     * @param mixed $config
+     * @return void
+     */
+    public function __construct(View $View, array $config = [])
+    {
+        parent::__construct($View,$config);
+        $this->_prefix = $this->request->param('prefix');
+        
+        switch($this->_prefix) {
+            case 'front':
+                    $this->pageCaption[] = __d('rita/core','home');
+                break;
+            default:
+                $this->pageCaption[] = __d('rita/core','dashboard');
+        }        
+
+    }
 
     
     /**
@@ -98,31 +128,6 @@ class RitaHelper extends Helper
     }
 
 
-    /**
-     * RitaHelper::pageTitle()
-     *
-     * @param mixed $title
-     * @return
-     */
-    public function pageTitle1($title = null)
-    {
-        
-        $title = ($title !== null)? $title : RitaConfig::read('Meta.title');
-
-         $titleVars = array('titlePlugin', 'titleController', 'titleAction' );
-         $temp = array();
-         $View = $this->_View;
-        foreach ($titleVars as $val) {
-            if (is_string($View->get($val))) {
-                $temp[] = $View->get($val);
-            }
-                 
-        }
-        $temp = implode(' > ', $temp);
-        
-        return $title  . ' | ' . $temp;
-    }
-  
   
     /**
      * RitaHelper::getCrumbList()
@@ -167,32 +172,8 @@ class RitaHelper extends Helper
         return $this->Html->getCrumbList(array('separator'=>'<span>/</span>'), array('text' => 'مدیریت','url'=>'doshboard'));
     }
 
-    /**
-     * RitaHelper::pageTitle()
-     * 
-     * @param mixed $siteTitle
-     * @param mixed $options
-     * @return void
-     */
-    public function pageTitle($siteTitle = null, $options = [])
-    {
-        $title = [];
-        
-        $titlePage = $this->_View->fetch('title');
-        
-        if($titlePage  !== '-') {
-            $title[] =  $titlePage .' - ';     
-        }
-         
-        if(!empty($siteTitle)) {
-            $title[] = $siteTitle;
-            
-        } 
-        
-        $title = implode('',$title);
-        
-        return '<title>'.$title . '</title>';
-    }
+
+
 
   
 
@@ -276,4 +257,91 @@ class RitaHelper extends Helper
 //			'url' => RitaRouter::getParams(true)
         ));
     }
+    
+    /**
+     * RitaHelper::setPageTitle()
+     * 
+     * @param mixed $text
+     * @return
+     */
+    public function setPageTitle($text)
+    {
+        $this->pageTitle[] = $text;
+        if($text === '-') {
+            $this->pageTitle = [];     
+        }
+        return $this;
+    }
+
+
+    /**
+     * RitaHelper::getPageTitle()
+     * 
+     * @param mixed $siteTitle
+     * @return
+     */
+    public function getPageTitle($siteTitle = null)
+    {
+        $title = null;
+       
+        $title = implode(': ',$this->pageTitle);
+                  
+        if(!empty($siteTitle) && !empty($title)) {
+            $title =  $siteTitle . ' | '.$title ;
+        } else {
+            $title = $siteTitle;
+        }
+        
+        return '<title>'.$title . '</title>';
+    }    
+        
+    /**
+     * RitaHelper::setCaption()
+     * 
+     * @param mixed $text
+     * @return
+     */
+    public function setPageCaption($text)
+    {
+        $this->pageCaption[] = $text;
+        if( $this->_prefix !== 'front') {
+            $this->setPageTitle($text);
+        }
+        return $this;
+    }
+
+    /**
+     * RitaHelper::getCaption()
+     * 
+     * @return
+     */
+    public function getPageCaption()
+    {
+        return implode(' / ',$this->pageCaption);
+    }
+    
+    
+    /**
+     * RitaHelper::setNote()
+     * 
+     * @param mixed $text
+     * @return
+     */
+    public function setPageNote($text)
+    {
+        $this->pageNote = $text;
+        return $this;
+    }
+    
+    /**
+     * RitaHelper::setNote()
+     * 
+     * @param mixed $text
+     * @return
+     */
+    public function getPageNote()
+    {
+        return $this->pageNote;
+        
+    }            
 }

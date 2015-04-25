@@ -2,7 +2,6 @@
 return [
     'css' => [
         'base' => [
-            'Rita/Core.fonts.css',
             'Rita/Core.icons/icons.css',
             'Rita/Core.material/materialdesignicons.css',
             'Rita/Core.animate.css',
@@ -13,7 +12,8 @@ return [
             
         ],
         'admin' => [
-            'Rita/Core.rita-admin.css',
+          'Rita/Core.rita-admin.css',
+          'Rita/Core.fonts.css',
             
         ],
     ],

@@ -906,6 +906,10 @@
   z-index: 200;
   transition: all 0.2s ease-in-out;
 }
+.menu-submenu > li.menu-divider {
+  background-color: #5D5D5D !important;
+  height: 1px;
+}
 .padding-none > .ui-dataGrid {
   border: 1px solid #fff !important;
 }

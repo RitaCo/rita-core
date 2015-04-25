@@ -4,7 +4,7 @@
     <?= $this->Html->charset() ?>
     <meta name="referrer" content="default">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?= $this->Rita->pageTitle('ریتا'); ?>
+	<?= $this->Rita->getPageTitle('ریتا'); ?>
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Rita->loadingCSS() ?>
@@ -39,8 +39,8 @@
 				<div id="content">
 					<section class="content-header">
 						<div class="info">
-                            <span class="action-title"><?= $this->fetch('title'); ?></span>
-                            <span class="action-note"><?= $this->fetch('note'); ?></span>
+                            <span class="action-title"><?= $this->Rita->getPageCaption(); ?></span>
+                            <span class="action-note"><?= $this->Rita->getPageNote(); ?></span>
                         </div>
 						<div class="actions">
                             <?php
