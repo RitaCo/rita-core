@@ -49,8 +49,8 @@ $.fn.RitaTab = function(option){
 			return;
 		}
 		data.ritaTab = true;
-		var nav = $this.find('> .tab-nav');
-		var body = $this.find('> .tab-container');
+		var nav = $this.find('> .tab--nav');
+		var body = $this.find('> .tab--container');
 	
 		var getTabID = function(tab){
 			
