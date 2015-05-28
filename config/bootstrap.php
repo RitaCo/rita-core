@@ -4,6 +4,7 @@ class_alias("\Rita\Core\Utility\Rita",'Rita', true);
 
 
 use \Cake\Routing\Router;
+use \Cake\Core\Configure;
 /**
  *  cache config
  */
@@ -16,7 +17,9 @@ Cache::config('rita', [
             'duration' => '+2 minutes',
 
     ]);
-    
+
+
+Configure::write('rita.version', ' ۳.۱.۰');    
 /**
  * menu Admin
  */

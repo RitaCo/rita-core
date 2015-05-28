@@ -61,7 +61,7 @@
 				</div>
 
 				<div class="admin-footer-wrapper">
-					<span>ویرایش : ۳.۰.۱۰</span>
+					<span>ویرایش :<?= \Cake\Core\Configure::read('rita.version'); ?></span>
 				</div>
 	
 			</div>
